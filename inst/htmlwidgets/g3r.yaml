@@ -1,0 +1,11 @@
+dependencies:
+ - name: threejs
+   version: 109
+   src: htmlwidgets/lib/three
+   script: three.min.js
+ - name: three-geo
+   version: 1.2.5
+   src: htmlwidgets/lib/three-geo
+   script: 
+    - orbitControls.js
+    - three-geo.min.js
