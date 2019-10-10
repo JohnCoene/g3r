@@ -121,33 +121,37 @@
 <pre class="sourceCode r" id="cb2"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw"><a href="reference/g3r.html">g3r</a></span>(<span class="dt">lat =</span> <span class="fl">36.2058</span>, <span class="dt">lon =</span> <span class="fl">-112.4413</span>)</a></code></pre>
-<div id="htmlwidget-0cf4e245ebf991fa72a6" class="g3r html-widget" width="100%" height="432.632880098888">
-<canvas id="htmlwidget-0cf4e245ebf991fa72a6-canvas" width="100%" height="432.632880098888"></canvas>
+<div id="htmlwidget-2d4f49c4cdc83c70071e" class="g3r html-widget" width="100%" height="432.632880098888">
+<canvas id="htmlwidget-2d4f49c4cdc83c70071e-canvas" width="100%" height="432.632880098888"></canvas>
 </div>
-<script type="application/json" data-for="htmlwidget-0cf4e245ebf991fa72a6">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":36.2058,"lon":-112.4413,"radius":5,"zoom":12},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-2d4f49c4cdc83c70071e">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":36.2058,"lon":-112.4413,"radius":5,"zoom":12},"evals":[],"jsHooks":[]}</script><details><summary>Demo Application</summary><p>
+</p>
+<pre class="sourceCode r" id="cb3"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1">g3r<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/g3r/topics/g3r_demo">g3r_demo</a></span>()</a></code></pre>
+
+</details>
 </div>
 <div id="virtual-reality" class="section level2">
 <h2 class="hasAnchor">
 <a href="#virtual-reality" class="anchor"></a>Virtual Reality</h2>
 <p>There is also the <a href="https://aframer.john-coene.com/">aframer</a> component. Note that we run that as a shiny app as the dependency files require to be served.</p>
-<pre class="sourceCode r" id="cb3"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
-<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(shiny)</a>
-<a class="sourceLine" id="cb3-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)</a>
-<a class="sourceLine" id="cb3-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aenvironment) <span class="co"># github/JohnCoene/aenvironment</span></a>
-<a class="sourceLine" id="cb3-5" data-line-number="5"></a>
-<a class="sourceLine" id="cb3-6" data-line-number="6"><span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/view">browse_aframe</a></span>(</a>
-<a class="sourceLine" id="cb3-7" data-line-number="7">  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(</a>
-<a class="sourceLine" id="cb3-8" data-line-number="8">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),</a>
-<a class="sourceLine" id="cb3-9" data-line-number="9">    <span class="kw"><a href="reference/g3r_aframer_dependency.html">g3r_aframer_dependency</a></span>(),</a>
-<a class="sourceLine" id="cb3-10" data-line-number="10">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aenvironment/topics/environment">aenvironment_dependency</a></span>(),</a>
-<a class="sourceLine" id="cb3-11" data-line-number="11">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aenvironment/topics/environment">a_environment</a></span>(</a>
-<a class="sourceLine" id="cb3-12" data-line-number="12">      <span class="dt">environment =</span> aframer<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/options">opts_aframe</a></span>(</a>
-<a class="sourceLine" id="cb3-13" data-line-number="13">        <span class="dt">preset =</span> <span class="st">"checkerboard"</span></a>
-<a class="sourceLine" id="cb3-14" data-line-number="14">      )</a>
-<a class="sourceLine" id="cb3-15" data-line-number="15">    ),</a>
-<a class="sourceLine" id="cb3-16" data-line-number="16">    <span class="kw"><a href="reference/a_map.html">a_map</a></span>()</a>
-<a class="sourceLine" id="cb3-17" data-line-number="17">  )</a>
-<a class="sourceLine" id="cb3-18" data-line-number="18">)</a></code></pre>
+<pre class="sourceCode r" id="cb4"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(shiny)</a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)</a>
+<a class="sourceLine" id="cb4-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aenvironment) <span class="co"># github/JohnCoene/aenvironment</span></a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb4-6" data-line-number="6"><span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/view">browse_aframe</a></span>(</a>
+<a class="sourceLine" id="cb4-7" data-line-number="7">  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(</a>
+<a class="sourceLine" id="cb4-8" data-line-number="8">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb4-9" data-line-number="9">    <span class="kw"><a href="reference/g3r_aframer_dependency.html">g3r_aframer_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb4-10" data-line-number="10">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aenvironment/topics/environment">aenvironment_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb4-11" data-line-number="11">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aenvironment/topics/environment">a_environment</a></span>(</a>
+<a class="sourceLine" id="cb4-12" data-line-number="12">      <span class="dt">environment =</span> aframer<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/options">opts_aframe</a></span>(</a>
+<a class="sourceLine" id="cb4-13" data-line-number="13">        <span class="dt">preset =</span> <span class="st">"checkerboard"</span></a>
+<a class="sourceLine" id="cb4-14" data-line-number="14">      )</a>
+<a class="sourceLine" id="cb4-15" data-line-number="15">    ),</a>
+<a class="sourceLine" id="cb4-16" data-line-number="16">    <span class="kw"><a href="reference/a_map.html">a_map</a></span>()</a>
+<a class="sourceLine" id="cb4-17" data-line-number="17">  )</a>
+<a class="sourceLine" id="cb4-18" data-line-number="18">)</a></code></pre>
 <p><img src="reference/figures/vr.png"></p>
 <p><br><a class="btn btn-primary" href="vr.html">Virtual Reality Demo</a></p>
 </div>
@@ -155,30 +159,29 @@
 <h2 class="hasAnchor">
 <a href="#augmented-reality" class="anchor"></a>Augmented Reality</h2>
 <p>As Augmented Reality with <a href="https://arframer.john-coene.com/">arframer</a>.</p>
-<pre class="sourceCode r" id="cb4"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
-<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)</a>
-<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(arframer)</a>
-<a class="sourceLine" id="cb4-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="kw">browse_arframe</span>(</a>
-<a class="sourceLine" id="cb4-6" data-line-number="6">  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(</a>
-<a class="sourceLine" id="cb4-7" data-line-number="7">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),</a>
-<a class="sourceLine" id="cb4-8" data-line-number="8">    <span class="kw"><a href="https://www.rdocumentation.org/packages/arframer/topics/arframer">arframer_dependency</a></span>(),</a>
-<a class="sourceLine" id="cb4-9" data-line-number="9">    <span class="kw"><a href="reference/g3r_aframer_dependency.html">g3r_aframer_dependency</a></span>(),</a>
-<a class="sourceLine" id="cb4-10" data-line-number="10">    <span class="dt">arjs =</span> <span class="st">"sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;"</span>,</a>
-<a class="sourceLine" id="cb4-11" data-line-number="11">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_primitive</a></span>(</a>
-<a class="sourceLine" id="cb4-12" data-line-number="12">      <span class="st">"marker"</span>,</a>
-<a class="sourceLine" id="cb4-13" data-line-number="13">      <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
-<a class="sourceLine" id="cb4-14" data-line-number="14">        <span class="kw"><a href="reference/a_map.html">a_map</a></span>(),</a>
-<a class="sourceLine" id="cb4-15" data-line-number="15">        <span class="dt">type =</span> <span class="st">"barcode"</span>,</a>
-<a class="sourceLine" id="cb4-16" data-line-number="16">        <span class="dt">value =</span> <span class="dv">1</span></a>
-<a class="sourceLine" id="cb4-17" data-line-number="17">      )</a>
-<a class="sourceLine" id="cb4-18" data-line-number="18">    ),</a>
-<a class="sourceLine" id="cb4-19" data-line-number="19">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_entity</a></span>(<span class="dt">camera =</span> <span class="ot">NA</span>)</a>
-<a class="sourceLine" id="cb4-20" data-line-number="20">  )</a>
-<a class="sourceLine" id="cb4-21" data-line-number="21">)</a></code></pre>
-<p>This will trigger on <a href="https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png">artoolkit5 barcode 1</a> (below): point your camera at it.</p>
+<pre class="sourceCode r" id="cb5"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
+<a class="sourceLine" id="cb5-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)</a>
+<a class="sourceLine" id="cb5-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(arframer)</a>
+<a class="sourceLine" id="cb5-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb5-5" data-line-number="5"><span class="kw">browse_arframe</span>(</a>
+<a class="sourceLine" id="cb5-6" data-line-number="6">  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(</a>
+<a class="sourceLine" id="cb5-7" data-line-number="7">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb5-8" data-line-number="8">    <span class="kw"><a href="https://www.rdocumentation.org/packages/arframer/topics/arframer">arframer_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb5-9" data-line-number="9">    <span class="kw"><a href="reference/g3r_aframer_dependency.html">g3r_aframer_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb5-10" data-line-number="10">    <span class="dt">arjs =</span> <span class="st">"sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;"</span>,</a>
+<a class="sourceLine" id="cb5-11" data-line-number="11">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_primitive</a></span>(</a>
+<a class="sourceLine" id="cb5-12" data-line-number="12">      <span class="st">"marker"</span>,</a>
+<a class="sourceLine" id="cb5-13" data-line-number="13">      <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
+<a class="sourceLine" id="cb5-14" data-line-number="14">        <span class="kw"><a href="reference/a_map.html">a_map</a></span>(),</a>
+<a class="sourceLine" id="cb5-15" data-line-number="15">        <span class="dt">type =</span> <span class="st">"barcode"</span>,</a>
+<a class="sourceLine" id="cb5-16" data-line-number="16">        <span class="dt">value =</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb5-17" data-line-number="17">      )</a>
+<a class="sourceLine" id="cb5-18" data-line-number="18">    ),</a>
+<a class="sourceLine" id="cb5-19" data-line-number="19">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_entity</a></span>(<span class="dt">camera =</span> <span class="ot">NA</span>)</a>
+<a class="sourceLine" id="cb5-20" data-line-number="20">  )</a>
+<a class="sourceLine" id="cb5-21" data-line-number="21">)</a></code></pre>
+<p>This will trigger on <a href="https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png">artoolkit5 barcode 1</a> (below), open de demo from your mobile and point your camera at it (if you’re on iPhone make sure you use Safari).</p>
 <p><img src="https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png"></p>
-<p>Open the demo (button) on your phone and point your camera at the marker above (printed or on screen).</p>
 <p><a class="btn btn-primary" href="ar.html">Augmented Reality Demo</a><br></p>
 <p><img src="reference/figures/ar.jpg" height="400px"></p>
 </div>

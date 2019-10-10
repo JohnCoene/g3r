@@ -66,6 +66,15 @@ library(g3r)
 g3r(lat = 36.2058, lon = -112.4413)
 ```
 
+<details>
+<summary>Demo Application</summary>
+<p>
+```r
+g3r::g3r_demo()
+```
+</p>
+</details>
+
 ## Virtual Reality
 
 There is also the [aframer](https://aframer.john-coene.com/) component. Note that we run that as a shiny app as the dependency files require to be served.
@@ -130,11 +139,9 @@ browse_arframe(
 )
 ```
 
-This will trigger on [artoolkit5 barcode 1](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png) (below): point your camera at it.
+This will trigger on [artoolkit5 barcode 1](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png) (below), open de demo from your mobile and point your camera at it (if you're on iPhone make sure you use Safari).
 
 ![](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png)
-
-Open the demo (button) on your phone and point your camera at the marker above (printed or on screen).
 
 ```{r, echo=FALSE}
 tags$a(

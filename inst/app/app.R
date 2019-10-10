@@ -4,7 +4,7 @@ library(geoloc)
 
 ui <- fluidPage(
   tags$head(
-    tags$style("#g3r{height:100vh!important;}")
+    tags$style("body{background-color:black;}#g3r{height:100vh!important;}")
   ),
   geoloc::onload_geoloc(),
   g3rOutput("g3r")
