@@ -1,1 +1,4 @@
 ^LICENSE\.md$
+docs
+index.Rmd
+pkgdown

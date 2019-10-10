@@ -1,0 +1,140 @@
+<!-- badges: start -->
+<!-- badges: end -->
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  warning = FALSE,
+  collapse = TRUE,
+  comment = "#>"
+)
+library(globe4r)
+library(htmltools)
+```
+
+```{r, echo=FALSE}
+br()
+div(
+  class = "row",
+  div(
+    class = "col-md-4",
+    img(
+      src = "logo.png",
+      class = "img-responsive responsive-img"
+    )
+  ),
+  div(
+    class = "col-md-8",
+    p(
+      "3D maps for R via",
+      tags$a(
+        "three-geo.", 
+        href = "https://github.com/w3reality/three-geo", 
+        target = "_blank"
+      )
+    ),
+    p("Create 3D Maps:"),
+    tags$ul(
+      tags$li("WebGL"),
+      tags$li("Virtual Reality"),
+      tags$li("Augmented Reality")
+    )
+  )
+)
+br()
+```
+
+## Installation
+
+You can install the g3r from Github:
+
+```r
+# install.packages("remotes")
+remotes::install_github("JohnCoene/g3r")
+```
+
+## Htmlwidget
+
+```{r}
+library(g3r)
+
+g3r()
+```
+
+## Virtual Reality
+
+There is also the [aframer](https://aframer.john-coene.com/) component. Note that we run that as a shiny app as the dependency files require to be served.
+
+``` r
+library(g3r)
+library(shiny)
+library(aframer)
+
+ui <- fluidPage(
+  embed_aframe(
+    height = "100vh",
+    a_scene(
+      a_dependency(),
+      g3r_aframer_dependency(),
+      a_map()
+    )
+  )
+)
+
+server <- function(input, output){}
+
+shinyApp(ui, server)
+```
+
+![](./man/figures/vr.png)
+
+```{r, echo=FALSE}
+tags$a(
+  class = "btn btn-primary",
+  "Virtual Reality Demo",
+  href = "vr.html"
+)
+```
+
+## Augmented Reality
+
+As Augmented Reality with [arframer](https://arframer.john-coene.com/).
+
+```r
+library(g3r)
+library(aframer)
+library(arframer)
+
+browse_aframe(
+  a_scene(
+    a_dependency(),
+    arframer_dependency(),
+    g3r_aframer_dependency(),
+    arjs = "sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;",
+    a_primitive(
+      "marker",
+      list(
+        a_map(),
+        type = "barcode",
+        value = 1
+      )
+    ),
+    a_entity(camera = NA)
+  )
+)
+```
+This will match [artoolkit5 barcode 1](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png): point your camera at it.
+
+![artoolkit5 barcode 1](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png)
+
+Open the demo (button) on your phone and point your camera at the marker above.
+
+```{r, echo=FALSE}
+tags$a(
+  class = "btn btn-primary",
+  "Augmented Reality Demo",
+  href = "ar.html"
+)
+```
+
+<img src="./man/figures/ar.jpg" height="400px">
+

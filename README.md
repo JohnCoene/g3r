@@ -56,7 +56,7 @@ library(g3r)
 library(aframer)
 library(arframer)
 
-scene <- embed_aframe(
+browse_aframe(
   a_scene(
     a_dependency(),
     arframer_dependency(),
@@ -74,3 +74,5 @@ scene <- embed_aframe(
   )
 )
 ```
+
+This will match [artoolkit5 barcode 1](https://github.com/artoolkit/artoolkit5/blob/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png): point your camera at it.
