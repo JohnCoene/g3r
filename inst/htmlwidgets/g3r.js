@@ -53,7 +53,7 @@ HTMLWidgets.widget({
 
         // render stuff --------
         var render = () => {
-            resizeCanvasToDisplaySize();
+            //resizeCanvasToDisplaySize();
             renderer.render(scene, camera);
         };
         // main --------
@@ -73,11 +73,7 @@ HTMLWidgets.widget({
       },
 
       resize: function(width, height) {
-        if(renderer)
-          renderer.setSize(width, height, false);
-        
-        if(camera)
-          camera.updateProjectionMatrix();
+        resizeCanvasToDisplaySize(true)
       }
 
     };
