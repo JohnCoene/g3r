@@ -26,6 +26,7 @@ HTMLWidgets.widget({
             // alpha: true,
             canvas: canvas,
         });
+        
         controls = new THREE.OrbitControls(camera, renderer.domElement);
 
         resizeCanvasToDisplaySize = (force=false) => {
@@ -69,6 +70,7 @@ HTMLWidgets.widget({
         });
 
         resizeCanvasToDisplaySize(true); // first time
+        renderer.setClearColor( x.backgroundColor, x.backgroundAlpha);
       },
 
       resize: function(width, height) {

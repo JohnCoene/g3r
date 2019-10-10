@@ -31,6 +31,13 @@ div(
       tags$li("WebGL"),
       tags$li("Virtual Reality"),
       tags$li("Augmented Reality")
+    ),
+    br(),
+    tags$a(
+      class = "btn btn-primary",
+      "Map Your Area",
+      href = "https://shiny.john-coene.com/g3r",
+      target = "_blank"
     )
   ),
   div(

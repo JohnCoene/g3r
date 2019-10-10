@@ -35,7 +35,9 @@ g3r <- function(lat = 45.9, lon = 6.8, radius = 5, zoom = 12,
     lat = lat, 
     lon = lon,
     radius = radius,
-    zoom = zoom
+    zoom = zoom,
+    backgroundColor = "0xffffff",
+    backgroundAlpha = 0
   )
 
   # create widget
@@ -45,7 +47,11 @@ g3r <- function(lat = 45.9, lon = 6.8, radius = 5, zoom = 12,
     width = width,
     height = height,
     package = 'g3r',
-    elementId = elementId
+    elementId = elementId,
+    sizingPolicy = htmlwidgets::sizingPolicy(
+      padding = 0,
+      browser.fill = TRUE
+    )
   )
 }
 
