@@ -79,7 +79,7 @@
 <!--/.navbar -->
 
       
-      </header><script src="index_files/htmlwidgets-1.5.1/htmlwidgets.js"></script><script src="index_files/threejs-109/three.min.js"></script><script src="index_files/three-geo-1.2.5/orbitControls.js"></script><script src="index_files/three-geo-1.2.5/three-geo.min.js"></script><script src="index_files/g3r-binding-0.1.0.9000/g3r.js"></script><div class="row">
+      </header><script src="index_files/htmlwidgets-1.5.1/htmlwidgets.js"></script><script src="index_files/threejs-109/three.min.js"></script><script src="index_files/three-geo-1.2.5/orbitControls.js"></script><script src="index_files/three-geo-1.2.5/three-geo.min.js"></script><script src="index_files/g3r-binding-0.1.0.9000/g3r.js"></script><script src="index_files/aframe-0.8.2/aframe.min.js"></script><script src="index_files/g3r-component-109/g3r-component.js"></script><script src="index_files/aenvironment-0.0.1/aframe-environment-component.min.js"></script><div class="row">
   <div class="col-md-9 contents">
     
 
@@ -119,10 +119,10 @@
 <pre class="sourceCode r" id="cb2"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"></a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw"><a href="reference/g3r.html">g3r</a></span>()</a></code></pre>
-<div id="htmlwidget-7a0b0b2dcfd5809a5c7e" class="g3r html-widget" width="100%" height="432.632880098888">
-<canvas id="htmlwidget-7a0b0b2dcfd5809a5c7e-canvas" width="100%" height="432.632880098888"></canvas>
+<div id="htmlwidget-e79487ce9a9322f1986e" class="g3r html-widget" width="100%" height="432.632880098888">
+<canvas id="htmlwidget-e79487ce9a9322f1986e-canvas" width="100%" height="432.632880098888"></canvas>
 </div>
-<script type="application/json" data-for="htmlwidget-7a0b0b2dcfd5809a5c7e">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg"},"lat":45.9,"lon":6.8,"radius":5,"zoom":12},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-e79487ce9a9322f1986e">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg"},"lat":45.9,"lon":6.8,"radius":5,"zoom":12},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="virtual-reality" class="section level2">
 <h2 class="hasAnchor">
@@ -147,6 +147,9 @@
 <a class="sourceLine" id="cb3-17" data-line-number="17">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_entity</a></span>(<span class="dt">id=</span><span class="st">"camera"</span>, <span class="dt">camera =</span> <span class="ot">NA</span>, <span class="st">`</span><span class="dt">look-controls</span><span class="st">`</span> =<span class="st"> </span><span class="ot">NA</span>, <span class="dt">position=</span><span class="st">"0 1.6 0"</span>)</a>
 <a class="sourceLine" id="cb3-18" data-line-number="18">  )</a>
 <a class="sourceLine" id="cb3-19" data-line-number="19">)</a></code></pre>
+<div>
+<a-scene style="width:100%;height:400px;" embedded><a-entity environment="preset: checkerboard;"></a-entity><a-entity map="token: pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg;lat: 45.9;lng: 6.8;zoom: 12;radius: 5;axes_on: false;" rotation="-90 180 0" scale="2 2 2" position="0 0.7 -1.5"></a-entity><a-entity id="camera" camera look-controls position="0 1.6 0"></a-entity></a-scene>
+</div>
 <p><img src="reference/figures/vr.png"></p>
 <p><br><a class="btn btn-primary" href="vr.html">Virtual Reality Demo</a></p>
 </div>
