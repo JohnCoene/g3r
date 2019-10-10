@@ -24,8 +24,7 @@ scene <- embed_aframe(
 
 htmltools::save_html(scene, file = "ar.html")
 
-scene2 <-   embed_aframe(
-  height = "100vh",
+scene2 <- embed_aframe(
   a_scene(
     a_dependency(),
     g3r_aframer_dependency(),
