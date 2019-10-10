@@ -60,6 +60,7 @@ scene <- embed_aframe(
   a_scene(
     a_dependency(),
     arframer_dependency(),
+    g3r_aframer_dependency(),
     arjs = "sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;",
     a_primitive(
       "marker",
