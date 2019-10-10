@@ -89,6 +89,7 @@ embed_aframe(
 ```
 
 ```{r, echo=FALSE}
+br()
 tags$a(
   class = "btn btn-primary",
   "Virtual Reality Demo",
