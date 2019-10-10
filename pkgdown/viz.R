@@ -25,21 +25,19 @@ scene <- embed_aframe(
 
 htmltools::save_html(scene, file = "ar.html")
 
-scene2 <- embed_aframe(
-  height = "100vh",
-  a_scene(
-    a_dependency(),
-    g3r_aframer_dependency(),
-    aenvironment_dependency(),
-    a_environment(
-      environment = aframer::opts_aframe(
-        preset = "checkerboard"
-      )
-    ),
-    a_map(),
-    a_entity(id="camera", camera = NA, `look-controls` = NA, position="0 1.6 0")
-  )
+scene2 <- a_scene(
+  a_dependency(),
+  g3r_aframer_dependency(),
+  aenvironment_dependency(),
+  a_environment(
+    environment = aframer::opts_aframe(
+      preset = "checkerboard"
+    )
+  ),
+  a_map(),
+  a_entity(id="camera", camera = NA, `look-controls` = NA, position="0 1.6 0")
 )
+
 
 htmltools::save_html(scene2, file = "vr.html", background = "black")
 
