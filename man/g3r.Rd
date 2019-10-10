@@ -10,6 +10,7 @@ g3r(
   radius = 5,
   zoom = 12,
   mapbox_token = Sys.getenv("MAPBOX_TOKEN"),
+  units_side = 1,
   width = "100\%",
   height = NULL,
   elementId = NULL
@@ -26,6 +27,9 @@ value supported. For a fixed radius, higher zoom resolution results
 in more tileset API calls.}
 
 \item{mapbox_token}{\href{https://www.mapbox.com/}{Mapbox} API token.}
+
+\item{units_side}{The side length of the square that fits the terrain 
+in WebGL space.}
 
 \item{width, height}{Must be a valid CSS unit (like \code{'100\%'},
 \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a

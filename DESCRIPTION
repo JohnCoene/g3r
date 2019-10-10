@@ -13,10 +13,15 @@ Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.99.9001
 Imports:
+    httr,
     shiny,
+    purrr,
+    geoloc,
     aframer,
+    magrittr,
     htmltools,
     htmlwidgets
 Remotes:
+    ColinFay/geoloc,
     JohnCoene/aframer,
     JohnCoene/arframer

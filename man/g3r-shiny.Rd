@@ -3,12 +3,12 @@
 \name{g3r-shiny}
 \alias{g3r-shiny}
 \alias{g3rOutput}
-\alias{renderG3r}
+\alias{render_g3r}
 \title{Shiny bindings for g3r}
 \usage{
 g3rOutput(outputId, width = "100\%", height = "400px")
 
-renderG3r(expr, env = parent.frame(), quoted = FALSE)
+render_g3r(expr, env = parent.frame(), quoted = FALSE)
 }
 \arguments{
 \item{outputId}{output variable to read from}

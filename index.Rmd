@@ -32,7 +32,7 @@ div(
         target = "_blank"
       )
     ),
-    p("Create 3D Maps:"),
+    p("Map types:"),
     tags$ul(
       tags$li("WebGL"),
       tags$li("Virtual Reality"),
@@ -52,14 +52,18 @@ You can install the g3r from Github:
 remotes::install_github("JohnCoene/g3r")
 ```
 
-## Htmlwidget
+## Prerequisites
 
-Note that all functions require a [mapbox](https://www.mapbox.com/) token, by default the function look for the `MAPBOX_TOKEN` environment variable.
+All functions require a freely available [mapbox](https://www.mapbox.com/) API token, by default the function look for the `MAPBOX_TOKEN` environment variable.
+
+## WebGL
+
+Works as an htmlwidget simply call the `g3r` function.
 
 ```{r}
 library(g3r)
 
-g3r()
+g3r(lat = 36.2058, lon = -112.4413)
 ```
 
 ## Virtual Reality
@@ -82,8 +86,7 @@ browse_aframe(
         preset = "checkerboard"
       )
     ),
-    a_map(),
-    a_entity(id="camera", camera = NA, `look-controls` = NA, position="0 1.6 0")
+    a_map()
   )
 )
 ```
@@ -108,7 +111,7 @@ library(g3r)
 library(aframer)
 library(arframer)
 
-browse_aframe(
+browse_arframe(
   a_scene(
     a_dependency(),
     arframer_dependency(),
@@ -126,11 +129,12 @@ browse_aframe(
   )
 )
 ```
-This will match [artoolkit5 barcode 1](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png): point your camera at it.
+
+This will trigger on [artoolkit5 barcode 1](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png) (below): point your camera at it.
 
 ![](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png)
 
-Open the demo (button) on your phone and point your camera at the marker above.
+Open the demo (button) on your phone and point your camera at the marker above (printed or on screen).
 
 ```{r, echo=FALSE}
 tags$a(

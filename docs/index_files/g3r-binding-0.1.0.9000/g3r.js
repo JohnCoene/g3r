@@ -40,7 +40,6 @@ HTMLWidgets.widget({
             camera.updateProjectionMatrix();
           }
         };
-        resizeCanvasToDisplaySize(true); // first time
 
         // object stuff --------
         var scene = new THREE.Scene();
@@ -53,7 +52,6 @@ HTMLWidgets.widget({
 
         // render stuff --------
         var render = () => {
-            //resizeCanvasToDisplaySize();
             renderer.render(scene, camera);
         };
         // main --------
@@ -68,8 +66,9 @@ HTMLWidgets.widget({
           onSatelliteMat: (mesh) => { // your implementation when terrain's satellite texture is obtained
               render(); // now render scene after dem material (satellite texture) is applifed
           },
-      });
+        });
 
+        resizeCanvasToDisplaySize(true); // first time
       },
 
       resize: function(width, height) {

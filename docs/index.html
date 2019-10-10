@@ -97,7 +97,7 @@
 3D maps for R via
 <a href="https://github.com/w3reality/three-geo" target="_blank">three-geo.</a>
 </p>
-<p>Create 3D Maps:</p>
+<p>Map types:</p>
 <ul>
 <li>WebGL</li>
 <li>Virtual Reality</li>
@@ -111,18 +111,20 @@
 <p>You can install the g3r from Github:</p>
 <pre class="sourceCode r" id="cb1"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># install.packages("remotes")</span></a>
 <a class="sourceLine" id="cb1-2" data-line-number="2">remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/remotes/topics/install_github">install_github</a></span>(<span class="st">"JohnCoene/g3r"</span>)</a></code></pre>
+<p>## Prerequisites</p>
+<p>All functions require a freely available <a href="https://www.mapbox.com/">mapbox</a> API token, by default the function look for the <code>MAPBOX_TOKEN</code> environment variable.</p>
 </div>
-<div id="htmlwidget" class="section level2">
+<div id="webgl" class="section level2">
 <h2 class="hasAnchor">
-<a href="#htmlwidget" class="anchor"></a>Htmlwidget</h2>
-<p>Note that all functions require a <a href="https://www.mapbox.com/">mapbox</a> token, by default the function look for the <code>MAPBOX_TOKEN</code> environment variable.</p>
+<a href="#webgl" class="anchor"></a>WebGL</h2>
+<p>Works as an htmlwidget simply call the <code>g3r</code> function.</p>
 <pre class="sourceCode r" id="cb2"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw"><a href="reference/g3r.html">g3r</a></span>()</a></code></pre>
-<div id="htmlwidget-b0731ea629bc3f314d18" class="g3r html-widget" width="100%" height="432.632880098888">
-<canvas id="htmlwidget-b0731ea629bc3f314d18-canvas" width="100%" height="432.632880098888"></canvas>
+<a class="sourceLine" id="cb2-3" data-line-number="3"><span class="kw"><a href="reference/g3r.html">g3r</a></span>(<span class="dt">lat =</span> <span class="fl">36.2058</span>, <span class="dt">lon =</span> <span class="fl">-112.4413</span>)</a></code></pre>
+<div id="htmlwidget-0cf4e245ebf991fa72a6" class="g3r html-widget" width="100%" height="432.632880098888">
+<canvas id="htmlwidget-0cf4e245ebf991fa72a6-canvas" width="100%" height="432.632880098888"></canvas>
 </div>
-<script type="application/json" data-for="htmlwidget-b0731ea629bc3f314d18">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg"},"lat":45.9,"lon":6.8,"radius":5,"zoom":12},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-0cf4e245ebf991fa72a6">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":36.2058,"lon":-112.4413,"radius":5,"zoom":12},"evals":[],"jsHooks":[]}</script>
 </div>
 <div id="virtual-reality" class="section level2">
 <h2 class="hasAnchor">
@@ -143,10 +145,9 @@
 <a class="sourceLine" id="cb3-13" data-line-number="13">        <span class="dt">preset =</span> <span class="st">"checkerboard"</span></a>
 <a class="sourceLine" id="cb3-14" data-line-number="14">      )</a>
 <a class="sourceLine" id="cb3-15" data-line-number="15">    ),</a>
-<a class="sourceLine" id="cb3-16" data-line-number="16">    <span class="kw"><a href="reference/a_map.html">a_map</a></span>(),</a>
-<a class="sourceLine" id="cb3-17" data-line-number="17">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_entity</a></span>(<span class="dt">id=</span><span class="st">"camera"</span>, <span class="dt">camera =</span> <span class="ot">NA</span>, <span class="st">`</span><span class="dt">look-controls</span><span class="st">`</span> =<span class="st"> </span><span class="ot">NA</span>, <span class="dt">position=</span><span class="st">"0 1.6 0"</span>)</a>
-<a class="sourceLine" id="cb3-18" data-line-number="18">  )</a>
-<a class="sourceLine" id="cb3-19" data-line-number="19">)</a></code></pre>
+<a class="sourceLine" id="cb3-16" data-line-number="16">    <span class="kw"><a href="reference/a_map.html">a_map</a></span>()</a>
+<a class="sourceLine" id="cb3-17" data-line-number="17">  )</a>
+<a class="sourceLine" id="cb3-18" data-line-number="18">)</a></code></pre>
 <p><img src="reference/figures/vr.png"></p>
 <p><br><a class="btn btn-primary" href="vr.html">Virtual Reality Demo</a></p>
 </div>
@@ -158,7 +159,7 @@
 <a class="sourceLine" id="cb4-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)</a>
 <a class="sourceLine" id="cb4-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(arframer)</a>
 <a class="sourceLine" id="cb4-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/view">browse_aframe</a></span>(</a>
+<a class="sourceLine" id="cb4-5" data-line-number="5"><span class="kw">browse_arframe</span>(</a>
 <a class="sourceLine" id="cb4-6" data-line-number="6">  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(</a>
 <a class="sourceLine" id="cb4-7" data-line-number="7">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),</a>
 <a class="sourceLine" id="cb4-8" data-line-number="8">    <span class="kw"><a href="https://www.rdocumentation.org/packages/arframer/topics/arframer">arframer_dependency</a></span>(),</a>
@@ -175,9 +176,9 @@
 <a class="sourceLine" id="cb4-19" data-line-number="19">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_entity</a></span>(<span class="dt">camera =</span> <span class="ot">NA</span>)</a>
 <a class="sourceLine" id="cb4-20" data-line-number="20">  )</a>
 <a class="sourceLine" id="cb4-21" data-line-number="21">)</a></code></pre>
-<p>This will match <a href="https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png">artoolkit5 barcode 1</a>: point your camera at it.</p>
+<p>This will trigger on <a href="https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png">artoolkit5 barcode 1</a> (below): point your camera at it.</p>
 <p><img src="https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png"></p>
-<p>Open the demo (button) on your phone and point your camera at the marker above.</p>
+<p>Open the demo (button) on your phone and point your camera at the marker above (printed or on screen).</p>
 <p><a class="btn btn-primary" href="ar.html">Augmented Reality Demo</a><br></p>
 <p><img src="reference/figures/ar.jpg" height="400px"></p>
 </div>

@@ -9,6 +9,8 @@
 #' value supported. For a fixed radius, higher zoom resolution results 
 #' in more tileset API calls.
 #' @param mapbox_token \href{https://www.mapbox.com/}{Mapbox} API token.
+#' @param units_side The side length of the square that fits the terrain 
+#' in WebGL space.
 #' @param elementId Id of div containing map.
 #' @param width,height Must be a valid CSS unit (like \code{'100\%'},
 #'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
@@ -17,9 +19,9 @@
 #' @import htmlwidgets
 #'
 #' @export
-g3r <- function(lat= 45.9, lon = 6.8, radius = 5, zoom = 12, 
-  mapbox_token = Sys.getenv("MAPBOX_TOKEN"), width = "100%", 
-  height = NULL, elementId = NULL) {
+g3r <- function(lat = 45.9, lon = 6.8, radius = 5, zoom = 12, 
+  mapbox_token = Sys.getenv("MAPBOX_TOKEN"), units_side = 1, 
+  width = "100%", height = NULL, elementId = NULL) {
 
   if(mapbox_token == "")
     stop("Invalid `mapbox_token`")
@@ -27,7 +29,8 @@ g3r <- function(lat= 45.9, lon = 6.8, radius = 5, zoom = 12,
   # forward options using x
   x = list(
     threegeo = list(
-      tokenMapbox = mapbox_token
+      tokenMapbox = mapbox_token,
+      unitsSide = units_side
     ),
     lat = lat, 
     lon = lon,
@@ -77,7 +80,7 @@ g3rOutput <- function(outputId, width = '100%', height = '400px'){
 
 #' @rdname g3r-shiny
 #' @export
-renderG3r <- function(expr, env = parent.frame(), quoted = FALSE) {
+render_g3r <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
   htmlwidgets::shinyRenderWidget(expr, g3rOutput, env, quoted = TRUE)
 }
