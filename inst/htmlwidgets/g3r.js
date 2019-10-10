@@ -73,7 +73,7 @@ HTMLWidgets.widget({
       },
 
       resize: function(width, height) {
-        resizeCanvasToDisplaySize(true)
+        resizeCanvasToDisplaySize(false)
       }
 
     };
