@@ -4,10 +4,9 @@
 
 # g3r
 
+<img src="./man/figures/logo.png" align="right" height="250px">
 
 3D, Virtual and Augmented Reality Maps.
-
-<img src="./man/figures/logo.png" align="right" height="250px">
 
 ## Installation
 
