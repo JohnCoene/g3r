@@ -75,7 +75,7 @@ library(aenvironment) # github/JohnCoene/aenvironment
 embed_aframe(
   a_scene(
     a_dependency(),
-    g3r_aframer_dependency(),
+    #g3r_aframer_dependency(),
     aenvironment_dependency(),
     a_environment(
       environment = aframer::opts_aframe(
