@@ -36,7 +36,7 @@ scene2 <- embed_aframe(
       )
     ),
     a_map(),
-    a_entity(id="camera", camera = NA, `look-controls` = NA)
+    a_entity(id="camera", camera = NA, `look-controls` = NA, position="0 1.6 0")
   )
 )
 
