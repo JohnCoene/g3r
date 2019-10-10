@@ -28,7 +28,8 @@ scene2 <- embed_aframe(
   a_scene(
     a_dependency(),
     g3r_aframer_dependency(),
-    a_map()
+    a_map(),
+    a_entity(camera = NA, `look-controls` = NA)
   )
 )
 
