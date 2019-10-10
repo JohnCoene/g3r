@@ -26,6 +26,7 @@ scene <- embed_aframe(
 htmltools::save_html(scene, file = "ar.html")
 
 scene2 <- embed_aframe(
+  height = "100%",
   a_scene(
     a_dependency(),
     g3r_aframer_dependency(),
@@ -40,6 +41,6 @@ scene2 <- embed_aframe(
   )
 )
 
-htmltools::save_html(scene2, file = "vr.html")
+htmltools::save_html(scene2, file = "vr.html", background = "black")
 
 setwd("../")
