@@ -54,6 +54,8 @@ remotes::install_github("JohnCoene/g3r")
 
 ## Htmlwidget
 
+Note that all functions require a [mapbox](https://www.mapbox.com/) token, by default the function look for the `MAPBOX_TOKEN` environment variable.
+
 ```{r}
 library(g3r)
 

@@ -73,7 +73,11 @@ HTMLWidgets.widget({
       },
 
       resize: function(width, height) {
-        resizeCanvasToDisplaySize(false)
+        if(renderer)
+          renderer.setSize(width, height, false);
+        
+        if(camera)
+          camera.updateProjectionMatrix();
       }
 
     };
