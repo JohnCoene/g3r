@@ -124,7 +124,7 @@ browse_aframe(
 ```
 This will match [artoolkit5 barcode 1](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png): point your camera at it.
 
-![artoolkit5 barcode 1](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png)
+![](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png)
 
 Open the demo (button) on your phone and point your camera at the marker above.
 
@@ -134,7 +134,7 @@ tags$a(
   "Augmented Reality Demo",
   href = "ar.html"
 )
+br()
 ```
 
 <img src="./man/figures/ar.jpg" height="400px">
-

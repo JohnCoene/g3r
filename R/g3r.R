@@ -18,7 +18,7 @@
 #'
 #' @export
 g3r <- function(lat= 45.9, lon = 6.8, radius = 5, zoom = 12, 
-  mapbox_token = Sys.getenv("MAPBOX_TOKEN"), width = NULL, 
+  mapbox_token = Sys.getenv("MAPBOX_TOKEN"), width = "100%", 
   height = NULL, elementId = NULL) {
 
   if(mapbox_token == "")

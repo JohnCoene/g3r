@@ -10,7 +10,7 @@ g3r(
   radius = 5,
   zoom = 12,
   mapbox_token = Sys.getenv("MAPBOX_TOKEN"),
-  width = NULL,
+  width = "100\%",
   height = NULL,
   elementId = NULL
 )

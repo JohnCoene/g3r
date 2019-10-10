@@ -8,13 +8,16 @@ HTMLWidgets.widget({
 
     var renderer,
         canvas,
+        parent,
         camera,
-        controls;
+        controls,
+        resizeCanvasToDisplaySize;
 
     return {
 
       renderValue: function(x) {
 
+        parent = document.getElementById(el.id);
         canvas = document.getElementById(el.id + '-canvas');
         camera = new THREE.PerspectiveCamera(75, canvas.width/canvas.height, 0.1, 1000);
         camera.position.set(0, 0, 1.5);
@@ -24,6 +27,21 @@ HTMLWidgets.widget({
             canvas: canvas,
         });
         controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+        resizeCanvasToDisplaySize = (force=false) => {
+          let width = parent.clientWidth;
+          let height = parent.clientHeight;
+          // adjust displayBuffer size to match
+          if (force || parent.width != width || parent.height != height) {
+            // you must pass false here or three.js sadly fights the browser
+            // console.log "resizing: #{canvas.width} #{canvas.height} -> #{width} #{height}"
+            renderer.setSize(width, height, false);
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+          }
+        };
+        resizeCanvasToDisplaySize(true); // first time
+
         // object stuff --------
         var scene = new THREE.Scene();
         var walls = new THREE.LineSegments(
@@ -32,8 +50,10 @@ HTMLWidgets.widget({
         walls.position.set(0, 0, 0);
         scene.add(walls);
         scene.add(new THREE.AxesHelper(1));
+
         // render stuff --------
         var render = () => {
+            resizeCanvasToDisplaySize();
             renderer.render(scene, camera);
         };
         // main --------
@@ -53,13 +73,7 @@ HTMLWidgets.widget({
       },
 
       resize: function(width, height) {
-
-        if(renderer){
-          renderer.setSize(width, height, false);
-          camera.aspect = width / height;
-          camera.updateProjectionMatrix();
-        }
-
+        resizeCanvasToDisplaySize(true)
       }
 
     };
