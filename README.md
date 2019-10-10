@@ -20,4 +20,4 @@ remotes::install_github("JohnCoene/g3r")
 
 [documentation lives here](https://g3r.john-coene.com)
 
-![](./man/figures/ar.png)
+<img src="./man/figures/ar.png" height="400px">
