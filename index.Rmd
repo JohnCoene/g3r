@@ -70,24 +70,23 @@ There is also the [aframer](https://aframer.john-coene.com/) component. Note tha
 library(g3r)
 library(shiny)
 library(aframer)
+library(aenvironment) # github/JohnCoene/aenvironment
 
-ui <- fluidPage(
-  embed_aframe(
-    height = "100vh",
-    a_scene(
-      a_dependency(),
-      g3r_aframer_dependency(),
-      a_map()
-    )
+embed_aframe(
+  a_scene(
+    a_dependency(),
+    g3r_aframer_dependency(),
+    aenvironment_dependency(),
+    a_environment(
+      environment = aframer::opts_aframe(
+        preset = "checkerboard"
+      )
+    ),
+    a_map(),
+    a_entity(id="camera", camera = NA, `look-controls` = NA, position="0 1.6 0")
   )
 )
-
-server <- function(input, output){}
-
-shinyApp(ui, server)
 ```
-
-![](./man/figures/vr.png)
 
 ```{r, echo=FALSE}
 tags$a(
