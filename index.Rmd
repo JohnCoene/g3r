@@ -139,17 +139,33 @@ browse_arframe(
 )
 ```
 
-This will trigger on [artoolkit5 barcode 1](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png) (below), open de demo from your mobile and point your camera at it (if you're on iPhone make sure you use Safari).
-
-![](https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png)
-
 ```{r, echo=FALSE}
-tags$a(
-  class = "btn btn-primary",
-  "Augmented Reality Demo",
-  href = "ar.html"
+br()
+div(
+  class = "row",
+  div(
+    class = "col-md-6",
+    tags$img(
+      src = "https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png"
+    ),
+    br(),
+    p(
+    "This will trigger on artoolkit5 barcode 1 (below), open de demo from your mobile and point your camera at it (if you're on iPhone make sure you use Safari)."
+    ),
+    tags$a(
+      class = "btn btn-primary",
+      "Augmented Reality Demo",
+      href = "ar.html"
+    )
+  ),
+  div(
+    class = "col-md-6",
+    tags$img(
+      src = "./man/figures/ar.png",
+      height = "450px"
+    )
+  )
 )
+
 br()
 ```
-
-<img src="./man/figures/ar.jpg" height="400px">
