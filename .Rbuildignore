@@ -2,3 +2,5 @@
 docs
 index.Rmd
 pkgdown
+^\.travis\.yml$
+^appveyor\.yml$
