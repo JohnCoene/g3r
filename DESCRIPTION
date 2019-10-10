@@ -2,11 +2,13 @@ Package: g3r
 Title: Create 3D and Virtual Geographical Maps
 Version: 0.1.0.9000
 Authors@R: 
-    person(given = "First",
-           family = "Last",
-           role = c("aut", "cre"),
-           email = "first.last@example.com",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person(
+      "John", 
+      "Coene", 
+      email = "jcoenep@gmail.com", 
+      role = c("aut", "cre"), 
+      comment = c(ORCID = "0000-0002-6637-4107")
+    )
 Description: Create 3D and virtual geographical maps.
 License: MIT + file LICENSE
 Encoding: UTF-8
