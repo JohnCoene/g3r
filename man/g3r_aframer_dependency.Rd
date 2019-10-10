@@ -4,7 +4,11 @@
 \alias{g3r_aframer_dependency}
 \title{Dependency}
 \usage{
-g3r_aframer_dependency()
+g3r_aframer_dependency(include_main = TRUE)
+}
+\arguments{
+\item{include_main}{Whether to include the main three-geo 
+dependency.}
 }
 \description{
 Dependency for g3r aframe component.

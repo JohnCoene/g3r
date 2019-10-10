@@ -2,21 +2,18 @@
 #' 
 #' Dependency for g3r aframe component.
 #' 
+#' @param include_main Whether to include the main three-geo 
+#' dependency.
+#' 
 #' @details Include in your \link[aframer]{a_scene}.
 #' 
 #' @export
-g3r_aframer_dependency <- function(){
+g3r_aframer_dependency <- function(include_main = TRUE){
   
   component <- c(file = system.file("aframe", package = "g3r"))
   dependency <- c(file = system.file("htmlwidgets/lib/three-geo", package = "g3r"))
 
-  list(
-    htmltools::htmlDependency(
-      name = "g3r-aframe",
-      version = 109,
-      src = dependency,
-      script = "three-geo.min.js"
-    ),
+  compo_dep <- list(
     htmltools::htmlDependency(
       name = "g3r-component",
       version = 109,
@@ -24,6 +21,18 @@ g3r_aframer_dependency <- function(){
       script = "g3r-component.js"
     )
   )
+
+  main_dep <- htmltools::htmlDependency(
+    name = "g3r-aframe",
+    version = 109,
+    src = dependency,
+    script = "three-geo.min.js"
+  )
+
+  if(!include_main)
+    return(compo_dep)
+
+  list(main_dep, compo_dep)
 }
 
 #' Aframer Map

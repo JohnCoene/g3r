@@ -66,16 +66,16 @@ g3r()
 
 There is also the [aframer](https://aframer.john-coene.com/) component. Note that we run that as a shiny app as the dependency files require to be served.
 
-```{r}
+``` r
 library(g3r)
 library(shiny)
 library(aframer)
-library(aenvironment) # github/JohnCoene/aenvironment
+library(aenvironment) # github/JohnCoene/aenvironment
 
 embed_aframe(
   a_scene(
     a_dependency(),
-    #g3r_aframer_dependency(),
+    g3r_aframer_dependency(FALSE),
     aenvironment_dependency(),
     a_environment(
       environment = aframer::opts_aframe(
@@ -87,6 +87,8 @@ embed_aframe(
   )
 )
 ```
+
+![](./man/figures/vr.png)
 
 ```{r, echo=FALSE}
 br()
