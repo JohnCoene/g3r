@@ -17,3 +17,7 @@ You can install the released version of g3r from [CRAN](https://CRAN.R-project.o
 # install.packages("remotes")
 remotes::install_github("JohnCoene/g3r")
 ```
+
+[documentation lives here](https://g3r.john-coene.com)
+
+![](./man/figures/ar.png)
