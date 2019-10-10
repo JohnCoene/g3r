@@ -66,7 +66,7 @@ g3r()
 
 There is also the [aframer](https://aframer.john-coene.com/) component. Note that we run that as a shiny app as the dependency files require to be served.
 
-``` r
+```{r}
 library(g3r)
 library(shiny)
 library(aframer)
