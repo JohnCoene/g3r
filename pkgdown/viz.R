@@ -3,6 +3,7 @@ setwd("./docs")
 library(g3r)
 library(aframer)
 library(arframer)
+library(aenvironment)
 
 scene <- embed_aframe(
   a_scene(
@@ -28,10 +29,17 @@ scene2 <- embed_aframe(
   a_scene(
     a_dependency(),
     g3r_aframer_dependency(),
+    aenvironment_dependency(),
+    a_environment(
+      environment = aframer::opts_aframe(
+        preset = "checkerboard"
+      )
+    ),
     a_map(),
     a_entity(
+      id = "rig",
       position = xyz_aframe(0, 10, 0),
-      a_entity(camera = NA, `look-controls` = NA)
+      a_entity(id="camera", camera = NA, `look-controls` = NA)
     )
   )
 )
