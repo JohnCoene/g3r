@@ -14,7 +14,7 @@ scene <- embed_aframe(
     a_primitive(
       "marker",
       list(
-        a_map(position = aframer::xyz_aframe(0, 0, 1)),
+        a_map(position = aframer::xyz_aframe(0, 0, -1)),
         type = "barcode",
         value = 1
       )
