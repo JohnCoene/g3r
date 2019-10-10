@@ -1,14 +1,21 @@
 Package: g3r
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Create 3D and Virtual Geographical Maps
+Version: 0.1.0.9000
 Authors@R: 
     person(given = "First",
            family = "Last",
            role = c("aut", "cre"),
            email = "first.last@example.com",
            comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: What license it uses
+Description: Create 3D and virtual geographical maps.
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 6.1.99.9001
+Imports:
+    shiny,
+    aframer,
+    htmltools,
+    htmlwidgets
+Remotes:
+    JohnCoene/aframer

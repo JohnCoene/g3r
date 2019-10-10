@@ -39,10 +39,8 @@ HTMLWidgets.widget({
         // main --------
         render(); // first time
         controls.addEventListener('change', render);
-        var tgeo = new ThreeGeo({
-            tokenMapbox: 'pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg', // <---- set your Mapbox API token here
-        });
-        tgeo.getTerrain([45.925461, 6.869810], 5.0, 12, {
+        var tgeo = new ThreeGeo(x.threegeo);
+        tgeo.getTerrain([x.lat, x.lon], x.radius, x.zoom, {
           onRgbDem: (meshes) => { // your implementation when terrain's geometry is obtained
               meshes.forEach((mesh) => { scene.add(mesh); });
               render(); // now render scene after dem meshes are added

@@ -2,10 +2,37 @@
 % Please edit documentation in R/g3r.R
 \name{g3r}
 \alias{g3r}
-\title{Initialise}
+\title{Create a 3D Map}
 \usage{
-g3r(message, width = NULL, height = NULL, elementId = NULL)
+g3r(
+  lat = 45.9,
+  lon = 6.8,
+  radius = 5,
+  zoom = 12,
+  mapbox_token = Sys.getenv("MAPBOX_TOKEN"),
+  width = NULL,
+  height = NULL,
+  elementId = NULL
+)
+}
+\arguments{
+\item{lat, lon}{Center coordinates of map.}
+
+\item{radius}{The radius of the circle that fits the terrain.}
+
+\item{zoom}{Satellite zoom resolution of the tiles in the terrain. 
+Select from {11, 12, 13, 14, 15, 16, 17}, where 17 is the highest 
+value supported. For a fixed radius, higher zoom resolution results 
+in more tileset API calls.}
+
+\item{mapbox_token}{\href{https://www.mapbox.com/}{Mapbox} API token.}
+
+\item{width, height}{Must be a valid CSS unit (like \code{'100\%'},
+\code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
+string and have \code{'px'} appended.}
+
+\item{elementId}{Id of div containing map.}
 }
 \description{
-<Add Description>
+Create a 3D Map.
 }
