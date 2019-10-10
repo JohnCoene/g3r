@@ -4,14 +4,15 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of g3r is to ...
+3D, Virtual and Augmented Reality Maps.
 
 ## Installation
 
 You can install the released version of g3r from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("g3r")
+# install.packages("remotes")
+remotes::install_github("JohnCoene/g3r")
 ```
 
 ## Example
