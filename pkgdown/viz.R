@@ -36,11 +36,7 @@ scene2 <- embed_aframe(
       )
     ),
     a_map(),
-    a_entity(
-      id = "rig",
-      position = xyz_aframe(0, 10, 0),
-      a_entity(id="camera", camera = NA, `look-controls` = NA)
-    )
+    a_entity(id="camera", camera = NA, `look-controls` = NA)
   )
 )
 
