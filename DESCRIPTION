@@ -18,4 +18,5 @@ Imports:
     htmltools,
     htmlwidgets
 Remotes:
-    JohnCoene/aframer
+    JohnCoene/aframer,
+    JohnCoene/arframer
