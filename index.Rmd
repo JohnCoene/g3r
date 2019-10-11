@@ -36,10 +36,12 @@ div(
       tags$li("Augmented Reality")
     ),
     br(),
+    p("Check out Locus Pocus, a Shiny application to map your surroundings."),
     tags$a(
+      tags$i(class = "fa fa-magic"),
       class = "btn btn-primary",
-      "Map Your Area",
-      href = "https://shiny.john-coene.com/g3r",
+      "Locus Pocus",
+      href = "https://shiny.john-coene.com/locus-pocus",
       target = "_blank"
     )
   ),
