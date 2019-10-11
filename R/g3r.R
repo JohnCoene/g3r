@@ -37,7 +37,8 @@ g3r <- function(lat = 45.9, lon = 6.8, radius = 5, zoom = 12,
     radius = radius,
     zoom = zoom,
     backgroundColor = "0xffffff",
-    backgroundAlpha = 0
+    backgroundAlpha = 0,
+    camera = list(lat = 0, lon = 0, elevation = 1.5)
   )
 
   # create widget

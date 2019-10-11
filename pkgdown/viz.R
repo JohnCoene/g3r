@@ -31,7 +31,7 @@ scene2 <- a_scene(
   aenvironment_dependency(),
   a_environment(
     environment = aframer::opts_aframe(
-      preset = "checkerboard"
+      preset = "starry"
     )
   ),
   a_map(),
