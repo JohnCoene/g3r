@@ -7,7 +7,7 @@
 g3r_camera(g3r, lat = 0, lon = 0, elevation = 1.5)
 }
 \arguments{
-\item{g3r}{An object of class \code{g3r} as returned by \code {g3r}.}
+\item{g3r}{An object of class \code{g3r} as returned by \code{g3r}.}
 
 \item{lat, lon, elevation}{Position of camera.}
 }

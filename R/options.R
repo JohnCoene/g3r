@@ -2,7 +2,7 @@
 #' 
 #' Adjust the position of the camera.
 #' 
-#' @param g3r An object of class \code{g3r} as returned by \code {g3r}.
+#' @param g3r An object of class \code{g3r} as returned by \code{g3r}.
 #' @param lat,lon,elevation Position of camera.
 #' 
 #' @export 

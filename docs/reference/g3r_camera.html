@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aframer Map — a_map • g3r</title>
+<title>Adjust Camera Position — g3r_camera • g3r</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,8 +42,8 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Aframer Map — a_map" />
-<meta property="og:description" content="Create Virtual Reality Map." />
+<meta property="og:title" content="Adjust Camera Position — g3r_camera" />
+<meta property="og:description" content="Adjust the position of the camera." />
 <meta property="og:image" content="https://g3r.john-coene.com/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -131,73 +131,27 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Aframer Map</h1>
+    <h1>Adjust Camera Position</h1>
     
-    <div class="hidden name"><code>a_map.Rd</code></div>
+    <div class="hidden name"><code>g3r_camera.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Create Virtual Reality Map.</p>
+    <p>Adjust the position of the camera.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>a_map</span>(
-  <span class='kw'>lat</span> <span class='kw'>=</span> <span class='fl'>45.9</span>,
-  <span class='kw'>lon</span> <span class='kw'>=</span> <span class='fl'>6.8</span>,
-  <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>5</span>,
-  <span class='kw'>zoom</span> <span class='kw'>=</span> <span class='fl'>12</span>,
-  <span class='kw'>axes_on</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>mapbox_token</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.getenv'>Sys.getenv</a></span>(<span class='st'>"MAPBOX_TOKEN"</span>),
-  <span class='kw'>rotation</span> <span class='kw'>=</span> <span class='kw pkg'>aframer</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/aframer/topics/options'>xyz_aframe</a></span>(-<span class='fl'>90</span>, <span class='fl'>180</span>, <span class='fl'>0</span>),
-  <span class='kw'>position</span> <span class='kw'>=</span> <span class='kw pkg'>aframer</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/aframer/topics/options'>xyz_aframe</a></span>(<span class='fl'>0</span>, <span class='fl'>0.7</span>, -<span class='fl'>1.5</span>),
-  <span class='kw'>scale</span> <span class='kw'>=</span> <span class='kw pkg'>aframer</span><span class='kw ns'>::</span><span class='fu'><a href='https://www.rdocumentation.org/packages/aframer/topics/options'>xyz_aframe</a></span>(<span class='fl'>2</span>, <span class='fl'>2</span>, <span class='fl'>2</span>),
-  <span class='no'>...</span>
-)</pre>
+    <pre class="usage"><span class='fu'>g3r_camera</span>(<span class='no'>g3r</span>, <span class='kw'>lat</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>lon</span> <span class='kw'>=</span> <span class='fl'>0</span>, <span class='kw'>elevation</span> <span class='kw'>=</span> <span class='fl'>1.5</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>lat</th>
-      <td><p>Center coordinates of map.</p></td>
+      <th>g3r</th>
+      <td><p>An object of class <code>g3r</code> as returned by <code>g3r</code>.</p></td>
     </tr>
     <tr>
-      <th>lon</th>
-      <td><p>Center coordinates of map.</p></td>
-    </tr>
-    <tr>
-      <th>radius</th>
-      <td><p>The radius of the circle that fits the terrain.</p></td>
-    </tr>
-    <tr>
-      <th>zoom</th>
-      <td><p>Satellite zoom resolution of the tiles in the terrain. 
-Select from 11, 12, 13, 14, 15, 16, 17, where 17 is the highest 
-value supported. For a fixed radius, higher zoom resolution results 
-in more tileset API calls.</p></td>
-    </tr>
-    <tr>
-      <th>axes_on</th>
-      <td><p>Whether to draw axes.</p></td>
-    </tr>
-    <tr>
-      <th>mapbox_token</th>
-      <td><p><a href='https://www.mapbox.com/'>Mapbox</a> API token.</p></td>
-    </tr>
-    <tr>
-      <th>rotation</th>
-      <td><p>Rotation of Map, default should work.</p></td>
-    </tr>
-    <tr>
-      <th>position</th>
-      <td><p>Position of map on scene.</p></td>
-    </tr>
-    <tr>
-      <th>scale</th>
-      <td><p>Scale of map.</p></td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td><p>Any other options passed to the aframe entity.</p></td>
+      <th>lat, lon, elevation</th>
+      <td><p>Position of camera.</p></td>
     </tr>
     </table>
 

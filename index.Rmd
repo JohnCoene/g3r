@@ -112,7 +112,7 @@ browse_aframe(
 )
 ```
 
-![](./man/figures/vr.png)
+![](./man/figures/vr.jpg)
 
 ```{r, echo=FALSE}
 br()
