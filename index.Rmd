@@ -77,7 +77,7 @@ Works as an htmlwidget simply call the `g3r` function.
 library(g3r)
 
 # grand canyon
-g3r(lat = 36.2058, lon = -112.4413) %>% g3r_camera(.5,.5,1)
+g3r(lat = 36.2058, lon = -112.4413, alpha = TRUE) %>% g3r_camera(.5,.5,1)
 ```
 
 <details>

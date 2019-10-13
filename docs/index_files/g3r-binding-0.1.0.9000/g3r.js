@@ -10,6 +10,8 @@ HTMLWidgets.widget({
         canvas,
         parent,
         camera,
+        radius,
+        origin,
         controls,
         resizeCanvasToDisplaySize;
 
@@ -20,10 +22,10 @@ HTMLWidgets.widget({
         parent = document.getElementById(el.id);
         canvas = document.getElementById(el.id + '-canvas');
         camera = new THREE.PerspectiveCamera(75, canvas.width/canvas.height, 0.1, 1000);
-        camera.position.set(x.camera.lon, x.camera.lat, x.camera.elevation);
-        camera.up.set(0, 0, 1); // important for OrbitControls
+        camera.position.set(x.camera.lon, x.camera.elevation, x.camera.lat);
+        camera.up.set(0, 4, 1); // important for OrbitControls
         renderer = new THREE.WebGLRenderer({
-            // alpha: true,
+            alpha: x.alpha,
             canvas: canvas,
         });
         
@@ -48,26 +50,58 @@ HTMLWidgets.widget({
             new THREE.EdgesGeometry(new THREE.BoxBufferGeometry(1, 1, 1)),
             new THREE.LineBasicMaterial({color: 0xcccccc}));
         walls.position.set(0, 0, 0);
+        if(x.walls)
         scene.add(walls);
-        scene.add(new THREE.AxesHelper(1));
+        if(x.axes)
+          scene.add(new THREE.AxesHelper(1));
 
         // render stuff --------
         var render = () => {
             renderer.render(scene, camera);
         };
+
+        origin = [x.lat, x.lon];
+        radius = x.radius;
+
         // main --------
         render(); // first time
         controls.addEventListener('change', render);
         var tgeo = new ThreeGeo(x.threegeo);
-        tgeo.getTerrain([x.lat, x.lon], x.radius, x.zoom, {
-          onRgbDem: (meshes) => { // your implementation when terrain's geometry is obtained
-              meshes.forEach((mesh) => { scene.add(mesh); });
-              render(); // now render scene after dem meshes are added
-          },
-          onSatelliteMat: (mesh) => { // your implementation when terrain's satellite texture is obtained
-              render(); // now render scene after dem material (satellite texture) is applifed
+        tgeo.getTerrain(origin, radius, x.zoom, {
+          onRgbDem: (meshes) => {},
+          onSatelliteMat: (mesh) => {
+              mesh.rotation.x = - Math.PI/2;
+              //mesh.material.wireframe = true;
+              scene.add(mesh);
+              render();
           },
         });
+
+        // add a point
+        const {proj, unitsPerMeter} = tgeo.getProjection([x.lat, x.lon], x.radius);
+
+        // proj: lng, lat -> x, y
+        // const [x, y, z] = [...proj([origin[1], origin[0]]), 4000]; // reprojection test
+        if(x.points){
+          x.points.forEach(function(p){
+
+            var color = new THREE.Color(p.color);
+
+            const dot = new THREE.Points(
+              new THREE.Geometry(),
+              new THREE.PointsMaterial({
+                  size: 8,
+                  sizeAttenuation: false,
+                  color: color,
+              }));
+
+            var [x, y, z] = [...proj(p.coordinates), p.elevation]; 
+
+            dot.geometry.vertices.push(new THREE.Vector3(
+                x, z * unitsPerMeter, y));
+            scene.add(dot);
+          })
+        }
 
         resizeCanvasToDisplaySize(true); // first time
         renderer.setClearColor( x.backgroundColor, x.backgroundAlpha);

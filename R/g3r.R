@@ -11,16 +11,21 @@
 #' @param mapbox_token \href{https://www.mapbox.com/}{Mapbox} API token.
 #' @param units_side The side length of the square that fits the terrain 
 #' in WebGL space.
+#' @param walls Whethert o show walls/cube.
+#' @param axes Whether to show helper axes.
+#' @param alpha Set to \code{TRUE} for a transparent backgorund.
 #' @param elementId Id of div containing map.
 #' @param width,height Must be a valid CSS unit (like \code{'100\%'},
 #'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
 #'   string and have \code{'px'} appended.
 #'
+#' @import dplyr
 #' @import htmlwidgets
 #'
 #' @export
 g3r <- function(lat = 45.9, lon = 6.8, radius = 5, zoom = 12, 
   mapbox_token = Sys.getenv("MAPBOX_TOKEN"), units_side = 1, 
+  walls = FALSE, axes = FALSE, alpha = FALSE,
   width = "100%", height = NULL, elementId = NULL) {
 
   if(mapbox_token == "")
@@ -36,6 +41,7 @@ g3r <- function(lat = 45.9, lon = 6.8, radius = 5, zoom = 12,
     lon = lon,
     radius = radius,
     zoom = zoom,
+    alpha = alpha,
     backgroundColor = "0xffffff",
     backgroundAlpha = 0,
     camera = list(lat = 0, lon = 0, elevation = 1.5)

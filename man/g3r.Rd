@@ -11,6 +11,9 @@ g3r(
   zoom = 12,
   mapbox_token = Sys.getenv("MAPBOX_TOKEN"),
   units_side = 1,
+  walls = FALSE,
+  axes = FALSE,
+  alpha = FALSE,
   width = "100\%",
   height = NULL,
   elementId = NULL
@@ -30,6 +33,12 @@ in more tileset API calls.}
 
 \item{units_side}{The side length of the square that fits the terrain 
 in WebGL space.}
+
+\item{walls}{Whethert o show walls/cube.}
+
+\item{axes}{Whether to show helper axes.}
+
+\item{alpha}{Set to \code{TRUE} for a transparent backgorund.}
 
 \item{width, height}{Must be a valid CSS unit (like \code{'100\%'},
 \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a

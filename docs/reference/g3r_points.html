@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Create a 3D Map — g3r • g3r</title>
+<title>Points — g3r_points • g3r</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,8 +42,8 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Create a 3D Map — g3r" />
-<meta property="og:description" content="Create a 3D Map." />
+<meta property="og:title" content="Points — g3r_points" />
+<meta property="og:description" content="Add points to a map." />
 <meta property="og:image" content="https://g3r.john-coene.com/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -131,87 +131,58 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Create a 3D Map</h1>
+    <h1>Points</h1>
     
-    <div class="hidden name"><code>g3r.Rd</code></div>
+    <div class="hidden name"><code>g3r_points.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Create a 3D Map.</p>
+    <p>Add points to a map.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>g3r</span>(
-  <span class='kw'>lat</span> <span class='kw'>=</span> <span class='fl'>45.9</span>,
-  <span class='kw'>lon</span> <span class='kw'>=</span> <span class='fl'>6.8</span>,
-  <span class='kw'>radius</span> <span class='kw'>=</span> <span class='fl'>5</span>,
-  <span class='kw'>zoom</span> <span class='kw'>=</span> <span class='fl'>12</span>,
-  <span class='kw'>mapbox_token</span> <span class='kw'>=</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/Sys.getenv'>Sys.getenv</a></span>(<span class='st'>"MAPBOX_TOKEN"</span>),
-  <span class='kw'>units_side</span> <span class='kw'>=</span> <span class='fl'>1</span>,
-  <span class='kw'>walls</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>axes</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>alpha</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>,
-  <span class='kw'>width</span> <span class='kw'>=</span> <span class='st'>"100%"</span>,
-  <span class='kw'>height</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>elementId</span> <span class='kw'>=</span> <span class='kw'>NULL</span>
-)</pre>
+    <pre class="usage"><span class='fu'>g3r_points</span>(<span class='no'>g3r</span>, <span class='no'>data</span>, <span class='no'>lat</span>, <span class='no'>lon</span>, <span class='no'>elevation</span>, <span class='no'>color</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
+      <th>g3r</th>
+      <td><p>An object of class <code>g3r</code> as returned by <code>g3r</code>.</p></td>
+    </tr>
+    <tr>
+      <th>data</th>
+      <td><p>A data.frame holding coordinates to plot.</p></td>
+    </tr>
+    <tr>
       <th>lat, lon</th>
-      <td><p>Center coordinates of map.</p></td>
+      <td><p>Coordinates and elevation of point.</p></td>
     </tr>
     <tr>
-      <th>radius</th>
-      <td><p>The radius of the circle that fits the terrain.</p></td>
+      <th>elevation</th>
+      <td><p>Elevation of point in meters.</p></td>
     </tr>
     <tr>
-      <th>zoom</th>
-      <td><p>Satellite zoom resolution of the tiles in the terrain. 
-Select from 11, 12, 13, 14, 15, 16, 17, where 17 is the highest 
-value supported. For a fixed radius, higher zoom resolution results 
-in more tileset API calls.</p></td>
-    </tr>
-    <tr>
-      <th>mapbox_token</th>
-      <td><p><a href='https://www.mapbox.com/'>Mapbox</a> API token.</p></td>
-    </tr>
-    <tr>
-      <th>units_side</th>
-      <td><p>The side length of the square that fits the terrain 
-in WebGL space.</p></td>
-    </tr>
-    <tr>
-      <th>walls</th>
-      <td><p>Whethert o show walls/cube.</p></td>
-    </tr>
-    <tr>
-      <th>axes</th>
-      <td><p>Whether to show helper axes.</p></td>
-    </tr>
-    <tr>
-      <th>alpha</th>
-      <td><p>Set to <code>TRUE</code> for a transparent backgorund.</p></td>
-    </tr>
-    <tr>
-      <th>width, height</th>
-      <td><p>Must be a valid CSS unit (like <code>'100%'</code>,
-<code>'400px'</code>, <code>'auto'</code>) or a number, which will be coerced to a
-string and have <code>'px'</code> appended.</p></td>
-    </tr>
-    <tr>
-      <th>elementId</th>
-      <td><p>Id of div containing map.</p></td>
+      <th>color</th>
+      <td><p>Color of the point.</p></td>
     </tr>
     </table>
 
 
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>df</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://www.rdocumentation.org/packages/base/topics/data.frame'>data.frame</a></span>(
+  <span class='kw'>lat</span> <span class='kw'>=</span>  <span class='fl'>8.0052</span>,
+  <span class='kw'>lon</span> <span class='kw'>=</span> <span class='fl'>46.5775</span>,
+  <span class='kw'>ele</span> <span class='kw'>=</span> <span class='fl'>3970</span>
+)
+
+<span class='fu'><a href='g3r.html'>g3r</a></span>(<span class='fl'>46.5763</span>, <span class='fl'>7.9904</span>, <span class='kw'>width</span> <span class='kw'>=</span> <span class='fl'>900</span>) <span class='kw'>%&gt;%</span>
+  <span class='fu'>g3r_points</span>(<span class='no'>df</span>, <span class='no'>lat</span>, <span class='no'>lon</span>, <span class='no'>ele</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
+      <li><a href="#examples">Examples</a></li>
     </ul>
 
   </div>

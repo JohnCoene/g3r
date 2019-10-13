@@ -17,8 +17,8 @@ init: function () {
           new THREE.EdgesGeometry(new THREE.BoxBufferGeometry(1, 1, 1)),
           new THREE.LineBasicMaterial({color: 0xcccccc}));
       walls.position.set(0, 0, 0);
-      geoScene.add(walls);
-      geoScene.add(new THREE.AxesHelper(1));
+      //geoScene.add(walls);
+      //geoScene.add(new THREE.AxesHelper(1));
     }
 
     const tgeo = new ThreeGeo({
