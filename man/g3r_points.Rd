@@ -21,6 +21,7 @@ g3r_points(g3r, data, lat, lon, elevation, color)
 Add points to a map.
 }
 \examples{
+\dontrun{
 df <- data.frame(
   lat =  8.0052,
   lon = 46.5775,
@@ -29,5 +30,6 @@ df <- data.frame(
 
 g3r(46.5763, 7.9904, width = 900) \%>\% 
   g3r_points(df, lat, lon, ele) 
+}
 
 }
