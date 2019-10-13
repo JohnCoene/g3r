@@ -23,7 +23,7 @@ HTMLWidgets.widget({
         canvas = document.getElementById(el.id + '-canvas');
         camera = new THREE.PerspectiveCamera(75, canvas.width/canvas.height, 0.1, 1000);
         camera.position.set(x.camera.lon, x.camera.elevation, x.camera.lat);
-        camera.up.set(2, 4, 1); // important for OrbitControls
+        camera.up.set(0, 4, 0); // important for OrbitControls
         renderer = new THREE.WebGLRenderer({
             alpha: x.alpha,
             canvas: canvas,
