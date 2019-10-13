@@ -41,7 +41,7 @@ div(
       tags$i(class = "fa fa-magic"),
       class = "btn btn-primary",
       "Locus Pocus",
-      href = "https://shiny.john-coene.com/locus-pocus",
+      href = "https://locus-pocus.io",
       target = "_blank"
     )
   ),
