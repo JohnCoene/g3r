@@ -71,17 +71,15 @@ HTMLWidgets.widget({
           onRgbDem: (meshes) => {},
           onSatelliteMat: (mesh) => {
               mesh.rotation.x = - Math.PI/2;
-              //mesh.material.wireframe = true;
               scene.add(mesh);
               render();
           },
         });
 
         // add a point
-        const {proj, unitsPerMeter} = tgeo.getProjection([x.lat, x.lon], x.radius);
+        const {proj, unitsPerMeter} = tgeo.getProjection(origin, radius);
 
         // proj: lng, lat -> x, y
-        // const [x, y, z] = [...proj([origin[1], origin[0]]), 4000]; // reprojection test
         if(x.points){
           x.points.forEach(function(p){
 
@@ -98,7 +96,7 @@ HTMLWidgets.widget({
             var [x, y, z] = [...proj(p.coordinates), p.elevation]; 
 
             dot.geometry.vertices.push(new THREE.Vector3(
-                x, z * unitsPerMeter, y));
+                x, z * unitsPerMeter, -y));
             scene.add(dot);
           })
         }

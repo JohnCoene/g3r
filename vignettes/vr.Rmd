@@ -1,0 +1,53 @@
+---
+title: "Virtual Reality"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Virtual Reality}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+library(g3r)
+library(htmltools)
+```
+
+There is also the [aframer](https://aframer.john-coene.com/) component. Note that we run that as a shiny app as the dependency files require to be served.
+
+```r
+library(g3r)
+library(shiny)
+library(aframer)
+library(aenvironment) # github/JohnCoene/aenvironment
+
+browse_aframe(
+  a_scene(
+    a_dependency(),
+    g3r_aframer_dependency(),
+    aenvironment_dependency(),
+    a_environment(
+      environment = aframer::opts_aframe(
+        preset = "starry"
+      )
+    ),
+    a_map()
+  )
+)
+```
+
+![](../man/figures/vr.jpg)
+
+
+```{r, echo=FALSE}
+br()
+tags$a(
+  class = "btn btn-primary",
+  "Virtual Reality Demo",
+  href = "../vr.html"
+)
+```

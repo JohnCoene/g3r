@@ -11,9 +11,9 @@
 #' @examples 
 #' \dontrun{
 #' df <- data.frame(
-#'   lat =  8.0052,
-#'   lon = 46.5775,
-#'   ele = 3970
+#'   lon =  7.9610, 
+#'   lat = 46.5852,
+#'   ele = 2100
 #' )
 #' 
 #' g3r(46.5763, 7.9904, width = 900) %>% 
@@ -41,7 +41,7 @@ g3r_points.g3r <- function(g3r, data, lat, lon, elevation, color) {
 
   points <- purrr::pmap(df, function(lat, lon, ele, color){
     list(
-      coordinates = c(lat, lon),
+      coordinates = c(lon, lat),
       elevation = ele,
       color = color
     )

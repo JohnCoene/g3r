@@ -15,6 +15,12 @@ navbar:
     - icon: fa-code fa-lg
       text: Reference
       href: "reference/"
+    - text: WebGL
+      href: "articles/webgl.html"
+    - text: Virtual Reality
+      href: "articles/vr.html"
+    - text: Augmented Reality
+      href: "articles/ar.html"
   right:
     - icon: fa-github fa-lg
       href: https://github.com/JohnCoene/g3r

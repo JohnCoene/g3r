@@ -1,0 +1,75 @@
+---
+title: "Augmented Reality"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Augmented Reality}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+library(g3r)
+library(htmltools)
+```
+
+As Augmented Reality with [arframer](https://arframer.john-coene.com/).
+
+```r
+library(g3r)
+library(aframer)
+library(arframer)
+
+browse_arframe(
+  a_scene(
+    a_dependency(),
+    arframer_dependency(),
+    g3r_aframer_dependency(),
+    arjs = "sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;",
+    a_primitive(
+      "marker",
+      list(
+        a_map(),
+        type = "barcode",
+        value = 1
+      )
+    ),
+    a_entity(camera = NA)
+  )
+)
+```
+
+```{r, echo=FALSE}
+br()
+div(
+  class = "row",
+  div(
+    class = "col-md-6",
+    tags$img(
+      src = "https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png"
+    ),
+    br(),
+    p(
+    "This will trigger on artoolkit5 barcode 1 (below), open de demo from your mobile and point your camera at it (if you're on iPhone make sure you use Safari)."
+    ),
+    tags$a(
+      class = "btn btn-primary",
+      "Augmented Reality Demo",
+      href = "../ar.html"
+    )
+  ),
+  div(
+    class = "col-md-6",
+    tags$img(
+      src = "../man/figures/ar.png",
+      height = "450px"
+    )
+  )
+)
+
+br()
+```

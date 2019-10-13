@@ -69,6 +69,15 @@
     Reference
   </a>
 </li>
+<li>
+  <a href="articles/webgl.html">WebGL</a>
+</li>
+<li>
+  <a href="articles/vr.html">Virtual Reality</a>
+</li>
+<li>
+  <a href="articles/ar.html">Augmented Reality</a>
+</li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
@@ -130,86 +139,15 @@ remotes<span class="op">::</span><span class="kw"><a href="https://www.rdocument
 <a href="#prerequisites" class="anchor"></a> Prerequisites</h2>
 <p>All functions require a freely available <a href="https://www.mapbox.com/">mapbox</a> API token, by default the function look for the <code>MAPBOX_TOKEN</code> environment variable.</p>
 </div>
-<div id="webgl" class="section level2">
+<div id="example" class="section level2">
 <h2 class="hasAnchor">
-<a href="#webgl" class="anchor"></a>WebGL</h2>
-<p>Works as an htmlwidget simply call the <code>g3r</code> function.</p>
+<a href="#example" class="anchor"></a>Example</h2>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)
-
-<span class="co"># grand canyon</span>
-<span class="kw"><a href="reference/g3r.html">g3r</a></span>(<span class="dt">lat =</span> <span class="fl">36.2058</span>, <span class="dt">lon =</span> <span class="fl">-112.4413</span>, <span class="dt">alpha =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="reference/g3r_camera.html">g3r_camera</a></span>(.<span class="dv">5</span>,.<span class="dv">5</span>,<span class="dv">1</span>)</code></pre></div>
-<div id="htmlwidget-edda9971fd9dba4e39cd" class="g3r html-widget" width="100%" height="432.632880098888">
-<canvas id="htmlwidget-edda9971fd9dba4e39cd-canvas" width="100%" height="432.632880098888"></canvas>
+<span class="kw"><a href="reference/g3r.html">g3r</a></span>()</code></pre></div>
+<div id="htmlwidget-c56acfac4bfd8f5e7656" class="g3r html-widget" width="100%" height="432.632880098888">
+<canvas id="htmlwidget-c56acfac4bfd8f5e7656-canvas" width="100%" height="432.632880098888"></canvas>
 </div>
-<script type="application/json" data-for="htmlwidget-edda9971fd9dba4e39cd">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":36.2058,"lon":-112.4413,"radius":5,"zoom":12,"alpha":true,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0.5,"lon":0.5,"elevation":1}},"evals":[],"jsHooks":[]}</script><details><summary>Demo Application</summary><p>
-</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">g3r<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/g3r/topics/g3r_demo">g3r_demo</a></span>()</code></pre></div>
-
-<p></p></details>
-</div>
-<div id="virtual-reality" class="section level2">
-<h2 class="hasAnchor">
-<a href="#virtual-reality" class="anchor"></a>Virtual Reality</h2>
-<p>There is also the <a href="https://aframer.john-coene.com/">aframer</a> component. Note that we run that as a shiny app as the dependency files require to be served.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(shiny)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aenvironment) <span class="co"># github/JohnCoene/aenvironment</span>
-
-<span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/view">browse_aframe</a></span>(
-  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),
-    <span class="kw"><a href="reference/g3r_aframer_dependency.html">g3r_aframer_dependency</a></span>(),
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aenvironment/topics/environment">aenvironment_dependency</a></span>(),
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aenvironment/topics/environment">a_environment</a></span>(
-      <span class="dt">environment =</span> aframer<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/options">opts_aframe</a></span>(
-        <span class="dt">preset =</span> <span class="st">"checkerboard"</span>
-      )
-    ),
-    <span class="kw"><a href="reference/a_map.html">a_map</a></span>()
-  )
-)</code></pre></div>
-<div class="figure">
-<img src="reference/figures/vr.jpg">
-</div>
-<p><br><a class="btn btn-primary" href="vr.html">Virtual Reality Demo</a></p>
-</div>
-<div id="augmented-reality" class="section level2">
-<h2 class="hasAnchor">
-<a href="#augmented-reality" class="anchor"></a>Augmented Reality</h2>
-<p>As Augmented Reality with <a href="https://arframer.john-coene.com/">arframer</a>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(arframer)
-
-<span class="kw">browse_arframe</span>(
-  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/arframer/topics/arframer">arframer_dependency</a></span>(),
-    <span class="kw"><a href="reference/g3r_aframer_dependency.html">g3r_aframer_dependency</a></span>(),
-    <span class="dt">arjs =</span> <span class="st">"sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;"</span>,
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_primitive</a></span>(
-      <span class="st">"marker"</span>,
-      <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(
-        <span class="kw"><a href="reference/a_map.html">a_map</a></span>(),
-        <span class="dt">type =</span> <span class="st">"barcode"</span>,
-        <span class="dt">value =</span> <span class="dv">1</span>
-      )
-    ),
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_entity</a></span>(<span class="dt">camera =</span> <span class="ot">NA</span>)
-  )
-)</code></pre></div>
-<p><br></p>
-<div class="row">
-<div class="col-md-6">
-<img src="https://raw.githubusercontent.com/artoolkit/artoolkit5/master/doc/patterns/Matrix%20code%203x3%20(72dpi)/1.png"><br><p>This will trigger on artoolkit5 barcode 1 (below), open de demo from your mobile and point your camera at it (if you're on iPhone make sure you use Safari).</p>
-<a class="btn btn-primary" href="ar.html">Augmented Reality Demo</a>
-</div>
-<div class="col-md-6">
-<img src="reference/figures/ar.png" height="450px">
-</div>
-</div>
-<br>
+<script type="application/json" data-for="htmlwidget-c56acfac4bfd8f5e7656">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":45.9,"lon":6.8,"radius":5,"zoom":12,"alpha":false,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0,"lon":0,"elevation":1.5}},"evals":[],"jsHooks":[]}</script>
 </div>
   </div>
 

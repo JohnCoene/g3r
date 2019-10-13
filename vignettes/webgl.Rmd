@@ -1,0 +1,48 @@
+---
+title: "WebGL"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{WebGL}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+library(g3r)
+library(htmltools)
+```
+
+Works as an htmlwidget simply call the `g3r` function.
+
+```{r}
+library(g3r)
+
+# grand canyon
+g3r(lat = 36.2058, lon = -112.4413, alpha = TRUE) %>% g3r_camera(.5,.5,1)
+```
+
+You can run a demo with:
+
+```r
+g3r::g3r_demo()
+```
+
+## Points
+
+You can add points to map with `g3r_points`, below we plot a town near the Swiss peak of Jungfrau.
+
+```{r}
+df <- data.frame(
+  lon =  7.9610, 
+  lat = 46.5852,
+  ele = 2100
+)
+
+g3r(46.5763, 7.9904) %>% 
+  g3r_points(df, lat, lon, ele) 
+```
