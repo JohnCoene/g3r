@@ -28,7 +28,3 @@ Remotes:
     ColinFay/geoloc,
     JohnCoene/aframer,
     JohnCoene/arframer
-Suggests: 
-    knitr,
-    rmarkdown
-VignetteBuilder: knitr
