@@ -109,31 +109,25 @@
     
     
 <p>Works as an htmlwidget simply call the <code>g3r</code> function.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)
-
-<span class="co"># grand canyon</span>
-<span class="kw"><a href="../reference/g3r.html">g3r</a></span>(<span class="dt">lat =</span> <span class="fl">36.2058</span>, <span class="dt">lon =</span> <span class="fl">-112.4413</span>, <span class="dt">alpha =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="../reference/g3r_camera.html">g3r_camera</a></span>(.<span class="dv">5</span>,.<span class="dv">5</span>,<span class="dv">1</span>)</code></pre></div>
-<div id="htmlwidget-d059c7967d77e1d83835" class="g3r html-widget" width="100%" height="432.632880098888">
-<canvas id="htmlwidget-d059c7967d77e1d83835-canvas" width="100%" height="432.632880098888"></canvas>
+<pre class="sourceCode r" id="cb1"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># grand canyon</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw"><a href="../reference/g3r.html">g3r</a></span>(<span class="dt">lat =</span> <span class="fl">36.2058</span>, <span class="dt">lon =</span> <span class="fl">-112.4413</span>, <span class="dt">alpha =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="../reference/g3r_camera.html">g3r_camera</a></span>(.<span class="dv">5</span>,.<span class="dv">5</span>,<span class="dv">1</span>)</a></code></pre>
+<div id="htmlwidget-4577a837bb0ff589a4ce" class="g3r html-widget" width="100%" height="432.632880098888">
+<canvas id="htmlwidget-4577a837bb0ff589a4ce-canvas" width="100%" height="432.632880098888"></canvas>
 </div>
-<script type="application/json" data-for="htmlwidget-d059c7967d77e1d83835">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":36.2058,"lon":-112.4413,"radius":5,"zoom":12,"alpha":true,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0.5,"lon":0.5,"elevation":1}},"evals":[],"jsHooks":[]}</script><p>You can run a demo with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">g3r<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/g3r/topics/g3r_demo">g3r_demo</a></span>()</code></pre></div>
+<script type="application/json" data-for="htmlwidget-4577a837bb0ff589a4ce">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":36.2058,"lon":-112.4413,"radius":5,"zoom":12,"alpha":true,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0.5,"lon":0.5,"elevation":1}},"evals":[],"jsHooks":[]}</script><p>You can run a demo with:</p>
+<pre class="sourceCode r" id="cb2"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">g3r<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/g3r/topics/g3r_demo">g3r_demo</a></span>()</a></code></pre>
 <div id="points" class="section level2">
 <h2 class="hasAnchor">
 <a href="#points" class="anchor"></a>Points</h2>
-<p>You can add points to map with <code>g3r_points</code>, below we plot a town near the Swiss peak of Jungfrau.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">df &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/data.frame">data.frame</a></span>(
-  <span class="dt">lon =</span>  <span class="fl">7.9610</span>, 
-  <span class="dt">lat =</span> <span class="fl">46.5852</span>,
-  <span class="dt">ele =</span> <span class="dv">2100</span>
-)
-
-<span class="kw"><a href="../reference/g3r.html">g3r</a></span>(<span class="fl">46.5763</span>, <span class="fl">7.9904</span>) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw"><a href="../reference/g3r_points.html">g3r_points</a></span>(df, lat, lon, ele) </code></pre></div>
-<div id="htmlwidget-fbe7fe1c9dc65df6fa4a" class="g3r html-widget" width="100%" height="432.632880098888">
-<canvas id="htmlwidget-fbe7fe1c9dc65df6fa4a-canvas" width="100%" height="432.632880098888"></canvas>
+<p>You can add points to map with <code>g3r_points</code>, below we plot the 4 base camps that lead to mount Everest: it’s a built-in “dataset”. Note that the elevation must be in meters.</p>
+<pre class="sourceCode r" id="cb3"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/g3r.html">g3r</a></span>(<span class="fl">27.985655</span>, <span class="fl">86.903697</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="../reference/g3r_points.html">g3r_points</a></span>(everest, lat, lon, ele)</a></code></pre>
+<div id="htmlwidget-1f280b7924da62bb6aa3" class="g3r html-widget" width="100%" height="432.632880098888">
+<canvas id="htmlwidget-1f280b7924da62bb6aa3-canvas" width="100%" height="432.632880098888"></canvas>
 </div>
-<script type="application/json" data-for="htmlwidget-fbe7fe1c9dc65df6fa4a">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":46.5763,"lon":7.9904,"radius":5,"zoom":12,"alpha":false,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0,"lon":0,"elevation":1.5},"points":[{"coordinates":[7.961,46.5852],"elevation":2100,"color":"red"}]},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-1f280b7924da62bb6aa3">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":27.985655,"lon":86.903697,"radius":5,"zoom":12,"alpha":false,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0,"lon":0,"elevation":1.5},"points":[{"coordinates":[86.924632,27.989219],"elevation":8848,"color":"red"},{"coordinates":[86.930039,27.974249],"elevation":7990,"color":"red"},{"coordinates":[86.925103,27.968336],"elevation":7674,"color":"red"},{"coordinates":[86.903184,27.98189],"elevation":6611,"color":"red"},{"coordinates":[86.876391,27.98922],"elevation":6133,"color":"red"}]},"evals":[],"jsHooks":[]}</script>
 </div>
   </div>
 

@@ -34,15 +34,9 @@ g3r::g3r_demo()
 
 ## Points
 
-You can add points to map with `g3r_points`, below we plot a town near the Swiss peak of Jungfrau.
+You can add points to map with `g3r_points`, below we plot the 4 base camps that lead to mount Everest: it's a built-in "dataset". Note that the elevation must be in meters.
 
 ```{r}
-df <- data.frame(
-  lon =  7.9610, 
-  lat = 46.5852,
-  ele = 2100
-)
-
-g3r(46.5763, 7.9904) %>% 
-  g3r_points(df, lat, lon, ele) 
+g3r(27.985655, 86.903697) %>% 
+  g3r_points(everest, lat, lon, ele)
 ```

@@ -5,3 +5,4 @@ pkgdown
 ^\.travis\.yml$
 ^appveyor\.yml$
 vignettes
+^data-raw$
