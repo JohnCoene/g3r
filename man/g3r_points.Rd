@@ -4,7 +4,7 @@
 \alias{g3r_points}
 \title{Points}
 \usage{
-g3r_points(g3r, data, lat, lon, elevation, color)
+g3r_points(g3r, data, lat, lon, elevation, size, color)
 }
 \arguments{
 \item{g3r}{An object of class \code{g3r} as returned by \code{g3r}.}
@@ -15,21 +15,17 @@ g3r_points(g3r, data, lat, lon, elevation, color)
 
 \item{elevation}{Elevation of point in meters.}
 
+\item{size}{The size of the point.}
+
 \item{color}{Color of the point.}
 }
 \description{
 Add points to a map.
 }
 \examples{
-\dontrun{
-df <- data.frame(
-  lon =  7.9610, 
-  lat = 46.5852,
-  ele = 2100
-)
-
-g3r(46.5763, 7.9904, width = 900) \%>\% 
-  g3r_points(df, lat, lon, ele) 
+\dontrun{ 
+g3r(46.5763, 7.9904) \%>\% 
+  g3r_points(everest, lat, lon, ele) 
 }
 
 }

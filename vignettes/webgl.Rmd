@@ -40,3 +40,13 @@ You can add points to map with `g3r_points`, below we plot the 4 base camps that
 g3r(27.985655, 86.903697) %>% 
   g3r_points(everest, lat, lon, ele)
 ```
+
+# Paths
+
+You can add paths to map with `g3r_paths`, below we plot the 4 base camps and a path connecting camps (not the actual path taken by climbers of course). 
+
+```{r}
+g3r(27.985655, 86.903697) %>% 
+  g3r_points(everest, lat, lon, ele) %>% 
+  g3r_paths(everest, lat, lon, ele)
+```
