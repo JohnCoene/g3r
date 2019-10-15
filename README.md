@@ -12,7 +12,7 @@
 
 ## Installation
 
-You can install the released version of g3r from [CRAN](https://CRAN.R-project.org) with:
+You can install the package from Github with:
 
 ``` r
 # install.packages("remotes")
