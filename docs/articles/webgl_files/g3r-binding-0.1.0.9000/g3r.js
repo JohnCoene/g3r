@@ -100,6 +100,25 @@ HTMLWidgets.widget({
           })
         }
 
+        // add spheres
+        if(x.spheres){
+          x.spheres.forEach(function(s){
+
+            var color = new THREE.Color(s.color);
+
+            const dot = new THREE.Mesh(
+              new THREE.SphereGeometry(5, 32, 32),
+              new THREE.MeshBasicMaterial({
+                  color: color,
+              }));
+
+            var [x, y, z] = [...proj(s.coordinates), s.elevation]; 
+
+            dot.geometry.vertices.push(new THREE.Vector3(x, z * unitsPerMeter, -y));
+            scene.add(dot);
+          })
+        }
+
         // add path
         if(x.paths){
           x.paths.forEach(function(p){

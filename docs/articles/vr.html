@@ -109,27 +109,25 @@
     
     
 <p>There is also the <a href="https://aframer.john-coene.com/">aframer</a> component. Note that we run that as a shiny app as the dependency files require to be served.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(shiny)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aenvironment) <span class="co"># github/JohnCoene/aenvironment</span>
-
-<span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/view">browse_aframe</a></span>(
-  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),
-    <span class="kw"><a href="../reference/g3r_aframer_dependency.html">g3r_aframer_dependency</a></span>(),
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aenvironment/topics/environment">aenvironment_dependency</a></span>(),
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aenvironment/topics/environment">a_environment</a></span>(
-      <span class="dt">environment =</span> aframer<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/options">opts_aframe</a></span>(
-        <span class="dt">preset =</span> <span class="st">"starry"</span>
-      )
-    ),
-    <span class="kw"><a href="../reference/a_map.html">a_map</a></span>()
-  )
-)</code></pre></div>
-<div class="figure">
-<img src="../man/figures/vr.jpg">
-</div>
+<pre class="sourceCode r" id="cb1"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(shiny)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aenvironment) <span class="co"># github/JohnCoene/aenvironment</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"></a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"><span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/view">browse_aframe</a></span>(</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">    <span class="kw"><a href="../reference/g3r_aframer_dependency.html">g3r_aframer_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aenvironment/topics/environment">aenvironment_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aenvironment/topics/environment">a_environment</a></span>(</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">      <span class="dt">environment =</span> aframer<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/options">opts_aframe</a></span>(</a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">        <span class="dt">preset =</span> <span class="st">"starry"</span></a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">      )</a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">    ),</a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">    <span class="kw"><a href="../reference/a_map.html">a_map</a></span>()</a>
+<a class="sourceLine" id="cb1-17" data-line-number="17">  )</a>
+<a class="sourceLine" id="cb1-18" data-line-number="18">)</a></code></pre>
+<p><img src="../man/figures/vr.jpg"></p>
 <p><br><a class="btn btn-primary" href="../vr.html">Virtual Reality Demo</a></p>
   </div>
 

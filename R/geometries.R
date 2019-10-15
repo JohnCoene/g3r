@@ -54,9 +54,9 @@ g3r_points.g3r <- function(g3r, data, lat, lon, elevation, size, color) {
   return(g3r)
 }
 
-#' Paths
+#' Lines
 #' 
-#' Add paths to a map.
+#' Add lines to a map.
 #' 
 #' @inheritParams g3r_camera
 #' @inheritParams g3r_points
@@ -65,15 +65,15 @@ g3r_points.g3r <- function(g3r, data, lat, lon, elevation, size, color) {
 #' @examples 
 #' \dontrun{ 
 #' g3r(27.985655, 86.903697) %>% 
-#'   g3r_paths(nuptse, lat, lon, ele) 
+#'   g3r_lines(nuptse, lat, lon, ele) 
 #' }
 #' 
 #' @export 
-g3r_paths <- function(g3r, data, lat, lon, elevation, width = 2L, color = "blue") UseMethod("g3r_paths")
+g3r_lines <- function(g3r, data, lat, lon, elevation, width = 2L, color = "blue") UseMethod("g3r_lines")
 
 #' @export 
-#' @method g3r_paths g3r 
-g3r_paths.g3r <- function(g3r, data, lat, lon, elevation, width = 2L, color = "blue") {
+#' @method g3r_lines g3r 
+g3r_lines.g3r <- function(g3r, data, lat, lon, elevation, width = 2L, color = "blue") {
 
   lat_enquo <- enquo(lat)
   lon_enquo <- enquo(lon)

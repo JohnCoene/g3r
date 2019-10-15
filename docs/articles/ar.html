@@ -109,27 +109,27 @@
     
     
 <p>As Augmented Reality with <a href="https://arframer.john-coene.com/">arframer</a>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)
-<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(arframer)
-
-<span class="kw">browse_arframe</span>(
-  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/arframer/topics/arframer">arframer_dependency</a></span>(),
-    <span class="kw"><a href="../reference/g3r_aframer_dependency.html">g3r_aframer_dependency</a></span>(),
-    <span class="dt">arjs =</span> <span class="st">"sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;"</span>,
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_primitive</a></span>(
-      <span class="st">"marker"</span>,
-      <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(
-        <span class="kw"><a href="../reference/a_map.html">a_map</a></span>(),
-        <span class="dt">type =</span> <span class="st">"barcode"</span>,
-        <span class="dt">value =</span> <span class="dv">1</span>
-      )
-    ),
-    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_entity</a></span>(<span class="dt">camera =</span> <span class="ot">NA</span>)
-  )
-)</code></pre></div>
+<pre class="sourceCode r" id="cb1"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(aframer)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(arframer)</a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw">browse_arframe</span>(</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6">  <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_scene</a></span>(</a>
+<a class="sourceLine" id="cb1-7" data-line-number="7">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/scene">a_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb1-8" data-line-number="8">    <span class="kw"><a href="https://www.rdocumentation.org/packages/arframer/topics/arframer">arframer_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">    <span class="kw"><a href="../reference/g3r_aframer_dependency.html">g3r_aframer_dependency</a></span>(),</a>
+<a class="sourceLine" id="cb1-10" data-line-number="10">    <span class="dt">arjs =</span> <span class="st">"sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3; debugUIEnabled: false;"</span>,</a>
+<a class="sourceLine" id="cb1-11" data-line-number="11">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_primitive</a></span>(</a>
+<a class="sourceLine" id="cb1-12" data-line-number="12">      <span class="st">"marker"</span>,</a>
+<a class="sourceLine" id="cb1-13" data-line-number="13">      <span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(</a>
+<a class="sourceLine" id="cb1-14" data-line-number="14">        <span class="kw"><a href="../reference/a_map.html">a_map</a></span>(),</a>
+<a class="sourceLine" id="cb1-15" data-line-number="15">        <span class="dt">type =</span> <span class="st">"barcode"</span>,</a>
+<a class="sourceLine" id="cb1-16" data-line-number="16">        <span class="dt">value =</span> <span class="dv">1</span></a>
+<a class="sourceLine" id="cb1-17" data-line-number="17">      )</a>
+<a class="sourceLine" id="cb1-18" data-line-number="18">    ),</a>
+<a class="sourceLine" id="cb1-19" data-line-number="19">    <span class="kw"><a href="https://www.rdocumentation.org/packages/aframer/topics/primitives">a_entity</a></span>(<span class="dt">camera =</span> <span class="ot">NA</span>)</a>
+<a class="sourceLine" id="cb1-20" data-line-number="20">  )</a>
+<a class="sourceLine" id="cb1-21" data-line-number="21">)</a></code></pre>
 <p><br></p>
 <div class="row">
 <div class="col-md-6">

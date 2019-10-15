@@ -76,10 +76,10 @@ HTMLWidgets.widget({
           },
         });
 
-        // add a point
+        // get the projection
         const {proj, unitsPerMeter} = tgeo.getProjection(origin, radius);
 
-        // proj: lng, lat -> x, y
+        // add points
         if(x.points){
           x.points.forEach(function(p){
 
@@ -88,16 +88,57 @@ HTMLWidgets.widget({
             const dot = new THREE.Points(
               new THREE.Geometry(),
               new THREE.PointsMaterial({
-                  size: 8,
+                  size: p.size,
                   sizeAttenuation: false,
                   color: color,
               }));
 
             var [x, y, z] = [...proj(p.coordinates), p.elevation]; 
 
-            dot.geometry.vertices.push(new THREE.Vector3(
-                x, z * unitsPerMeter, -y));
+            dot.geometry.vertices.push(new THREE.Vector3(x, z * unitsPerMeter, -y));
             scene.add(dot);
+          })
+        }
+
+        // add spheres
+        if(x.spheres){
+          x.spheres.forEach(function(s){
+
+            var color = new THREE.Color(s.color);
+
+            const dot = new THREE.Mesh(
+              new THREE.SphereGeometry(5, 32, 32),
+              new THREE.MeshBasicMaterial({
+                  color: color,
+              }));
+
+            var [x, y, z] = [...proj(s.coordinates), s.elevation]; 
+
+            dot.geometry.vertices.push(new THREE.Vector3(x, z * unitsPerMeter, -y));
+            scene.add(dot);
+          })
+        }
+
+        // add path
+        if(x.paths){
+          x.paths.forEach(function(p){
+
+            console.log(p);
+
+            var color = new THREE.Color(p.color);
+            
+            var line = new THREE.Line( new THREE.Geometry(), 
+              new THREE.LineBasicMaterial({
+                color: color,
+                linewidth: p.width
+              })
+            );
+            p.coords.forEach(function(c){
+              var [x, y, z] = [...proj(c.coordinates), c.elevation];
+              line.geometry.vertices.push(new THREE.Vector3(x, z * unitsPerMeter, -y));
+            });
+            
+            scene.add( line );
           })
         }
 

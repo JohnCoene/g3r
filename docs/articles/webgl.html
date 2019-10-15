@@ -109,37 +109,37 @@
     
     
 <p>Works as an htmlwidget simply call the <code>g3r</code> function.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)
-
-<span class="co"># grand canyon</span>
-<span class="kw"><a href="../reference/g3r.html">g3r</a></span>(<span class="dt">lat =</span> <span class="fl">36.2058</span>, <span class="dt">lon =</span> <span class="fl">-112.4413</span>, <span class="dt">alpha =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="../reference/g3r_camera.html">g3r_camera</a></span>(.<span class="dv">5</span>,.<span class="dv">5</span>,<span class="dv">1</span>)</code></pre></div>
-<div id="htmlwidget-3993f22436c17ab93321" class="g3r html-widget" width="100%" height="432.632880098888">
-<canvas id="htmlwidget-3993f22436c17ab93321-canvas" width="100%" height="432.632880098888"></canvas>
+<pre class="sourceCode r" id="cb1"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(g3r)</a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"><span class="co"># grand canyon</span></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="kw"><a href="../reference/g3r.html">g3r</a></span>(<span class="dt">lat =</span> <span class="fl">36.2058</span>, <span class="dt">lon =</span> <span class="fl">-112.4413</span>, <span class="dt">alpha =</span> <span class="ot">TRUE</span>) <span class="op">%&gt;%</span><span class="st"> </span><span class="kw"><a href="../reference/g3r_camera.html">g3r_camera</a></span>(.<span class="dv">5</span>,.<span class="dv">5</span>,<span class="dv">1</span>)</a></code></pre>
+<div id="htmlwidget-ff034c164bb42b382c43" class="g3r html-widget" width="100%" height="432.632880098888">
+<canvas id="htmlwidget-ff034c164bb42b382c43-canvas" width="100%" height="432.632880098888"></canvas>
 </div>
-<script type="application/json" data-for="htmlwidget-3993f22436c17ab93321">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":36.2058,"lon":-112.4413,"radius":5,"zoom":12,"alpha":true,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0.5,"lon":0.5,"elevation":1}},"evals":[],"jsHooks":[]}</script><p>You can run a demo with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">g3r<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/g3r/topics/g3r_demo">g3r_demo</a></span>()</code></pre></div>
+<script type="application/json" data-for="htmlwidget-ff034c164bb42b382c43">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":36.2058,"lon":-112.4413,"radius":5,"zoom":12,"alpha":true,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0.5,"lon":0.5,"elevation":1}},"evals":[],"jsHooks":[]}</script><p>You can run a demo with:</p>
+<pre class="sourceCode r" id="cb2"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">g3r<span class="op">::</span><span class="kw"><a href="https://www.rdocumentation.org/packages/g3r/topics/g3r_demo">g3r_demo</a></span>()</a></code></pre>
 <div id="points" class="section level2">
 <h2 class="hasAnchor">
 <a href="#points" class="anchor"></a>Points</h2>
 <p>You can add points to map with <code>g3r_points</code>, below we plot the 4 base camps that lead to mount Everest: it’s a built-in “dataset”. Note that the elevation must be in meters.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/g3r.html">g3r</a></span>(<span class="fl">27.985655</span>, <span class="fl">86.903697</span>) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw"><a href="../reference/g3r_points.html">g3r_points</a></span>(everest, lat, lon, ele)</code></pre></div>
-<div id="htmlwidget-b0040ce4b7e5858074fe" class="g3r html-widget" width="100%" height="432.632880098888">
-<canvas id="htmlwidget-b0040ce4b7e5858074fe-canvas" width="100%" height="432.632880098888"></canvas>
+<pre class="sourceCode r" id="cb3"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" data-line-number="1"><span class="kw"><a href="../reference/g3r.html">g3r</a></span>(<span class="fl">27.985655</span>, <span class="fl">86.903697</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb3-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="../reference/g3r_points.html">g3r_points</a></span>(everest, lat, lon, ele)</a></code></pre>
+<div id="htmlwidget-453223824589882712c4" class="g3r html-widget" width="100%" height="432.632880098888">
+<canvas id="htmlwidget-453223824589882712c4-canvas" width="100%" height="432.632880098888"></canvas>
 </div>
-<script type="application/json" data-for="htmlwidget-b0040ce4b7e5858074fe">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":27.985655,"lon":86.903697,"radius":5,"zoom":12,"alpha":false,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0,"lon":0,"elevation":1.5},"points":[{"coordinates":[86.924632,27.989219],"elevation":8848,"color":"red","size":6},{"coordinates":[86.930039,27.974249],"elevation":7990,"color":"red","size":6},{"coordinates":[86.925103,27.968336],"elevation":7674,"color":"red","size":6},{"coordinates":[86.903184,27.98189],"elevation":6611,"color":"red","size":6},{"coordinates":[86.876391,27.98922],"elevation":6133,"color":"red","size":6}]},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-453223824589882712c4">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":27.985655,"lon":86.903697,"radius":5,"zoom":12,"alpha":false,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0,"lon":0,"elevation":1.5},"points":[{"coordinates":[86.924632,27.989219],"elevation":8848,"color":"red","size":6},{"coordinates":[86.930039,27.974249],"elevation":7990,"color":"red","size":6},{"coordinates":[86.925103,27.968336],"elevation":7674,"color":"red","size":6},{"coordinates":[86.903184,27.98189],"elevation":6611,"color":"red","size":6},{"coordinates":[86.876391,27.98922],"elevation":6133,"color":"red","size":6}]},"evals":[],"jsHooks":[]}</script>
 </div>
-<div id="paths" class="section level1">
+<div id="lines" class="section level1">
 <h1 class="hasAnchor">
-<a href="#paths" class="anchor"></a>Paths</h1>
-<p>You can add paths to map with <code>g3r_paths</code>, below we plot the 4 base camps and a path connecting camps (not the actual path taken by climbers of course).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/g3r.html">g3r</a></span>(<span class="fl">27.985655</span>, <span class="fl">86.903697</span>) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw"><a href="../reference/g3r_points.html">g3r_points</a></span>(everest, lat, lon, ele) <span class="op">%&gt;%</span><span class="st"> </span>
-<span class="st">  </span><span class="kw"><a href="../reference/g3r_paths.html">g3r_paths</a></span>(everest, lat, lon, ele)</code></pre></div>
-<div id="htmlwidget-d7d32d6aacdbabd79154" class="g3r html-widget" width="100%" height="432.632880098888">
-<canvas id="htmlwidget-d7d32d6aacdbabd79154-canvas" width="100%" height="432.632880098888"></canvas>
+<a href="#lines" class="anchor"></a>Lines</h1>
+<p>You can add lines to map with <code>g3r_lines</code>, below we plot the 4 base camps and a path connecting camps (not the actual path taken by climbers of course).</p>
+<pre class="sourceCode r" id="cb4"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/g3r.html">g3r</a></span>(<span class="fl">27.985655</span>, <span class="fl">86.903697</span>) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb4-2" data-line-number="2"><span class="st">  </span><span class="kw"><a href="../reference/g3r_points.html">g3r_points</a></span>(everest, lat, lon, ele) <span class="op">%&gt;%</span><span class="st"> </span></a>
+<a class="sourceLine" id="cb4-3" data-line-number="3"><span class="st">  </span><span class="kw"><a href="../reference/g3r_lines.html">g3r_lines</a></span>(everest, lat, lon, ele)</a></code></pre>
+<div id="htmlwidget-ee616405f32ab12653c7" class="g3r html-widget" width="100%" height="432.632880098888">
+<canvas id="htmlwidget-ee616405f32ab12653c7-canvas" width="100%" height="432.632880098888"></canvas>
 </div>
-<script type="application/json" data-for="htmlwidget-d7d32d6aacdbabd79154">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":27.985655,"lon":86.903697,"radius":5,"zoom":12,"alpha":false,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0,"lon":0,"elevation":1.5},"points":[{"coordinates":[86.924632,27.989219],"elevation":8848,"color":"red","size":6},{"coordinates":[86.930039,27.974249],"elevation":7990,"color":"red","size":6},{"coordinates":[86.925103,27.968336],"elevation":7674,"color":"red","size":6},{"coordinates":[86.903184,27.98189],"elevation":6611,"color":"red","size":6},{"coordinates":[86.876391,27.98922],"elevation":6133,"color":"red","size":6}],"paths":[{"coords":[{"coordinates":[86.924632,27.989219],"elevation":8848},{"coordinates":[86.930039,27.974249],"elevation":7990},{"coordinates":[86.925103,27.968336],"elevation":7674},{"coordinates":[86.903184,27.98189],"elevation":6611},{"coordinates":[86.876391,27.98922],"elevation":6133}],"color":"blue","width":2}]},"evals":[],"jsHooks":[]}</script>
+<script type="application/json" data-for="htmlwidget-ee616405f32ab12653c7">{"x":{"threegeo":{"tokenMapbox":"pk.eyJ1IjoiamNvZW5lcCIsImEiOiJjamwyYXJyMjExb2R0M3FxcDlmemg2czFiIn0.OL6qEEADz5qBjhKecwgBdg","unitsSide":1},"lat":27.985655,"lon":86.903697,"radius":5,"zoom":12,"alpha":false,"backgroundColor":"0xffffff","backgroundAlpha":0,"camera":{"lat":0,"lon":0,"elevation":1.5},"points":[{"coordinates":[86.924632,27.989219],"elevation":8848,"color":"red","size":6},{"coordinates":[86.930039,27.974249],"elevation":7990,"color":"red","size":6},{"coordinates":[86.925103,27.968336],"elevation":7674,"color":"red","size":6},{"coordinates":[86.903184,27.98189],"elevation":6611,"color":"red","size":6},{"coordinates":[86.876391,27.98922],"elevation":6133,"color":"red","size":6}],"paths":[{"coords":[{"coordinates":[86.924632,27.989219],"elevation":8848},{"coordinates":[86.930039,27.974249],"elevation":7990},{"coordinates":[86.925103,27.968336],"elevation":7674},{"coordinates":[86.903184,27.98189],"elevation":6611},{"coordinates":[86.876391,27.98922],"elevation":6133}],"color":"blue","width":2}]},"evals":[],"jsHooks":[]}</script>
 </div>
   </div>
 
@@ -150,7 +150,7 @@
 <a href="#tocnav" class="anchor"></a>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
 <li><a href="#points">Points</a></li>
-      <li><a href="#paths">Paths</a></li>
+      <li><a href="#lines">Lines</a></li>
       </ul>
 </div>
       </div>

@@ -7,6 +7,9 @@
     <loc>https://g3r.john-coene.com/reference/a_map.html</loc>
   </url>
   <url>
+    <loc>https://g3r.john-coene.com/reference/everest.html</loc>
+  </url>
+  <url>
     <loc>https://g3r.john-coene.com/reference/g3r-shiny.html</loc>
   </url>
   <url>
@@ -22,10 +25,16 @@
     <loc>https://g3r.john-coene.com/reference/g3r_demo.html</loc>
   </url>
   <url>
+    <loc>https://g3r.john-coene.com/reference/g3r_lines.html</loc>
+  </url>
+  <url>
     <loc>https://g3r.john-coene.com/reference/g3r_points.html</loc>
   </url>
   <url>
-    <loc>https://g3r.john-coene.com/reference/get_elevations.html</loc>
+    <loc>https://g3r.john-coene.com/reference/get_mapbox_elevations.html</loc>
+  </url>
+  <url>
+    <loc>https://g3r.john-coene.com/reference/nuptse.html</loc>
   </url>
   <url>
     <loc>https://g3r.john-coene.com/reference/pipe.html</loc>

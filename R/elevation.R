@@ -5,7 +5,6 @@ BASE_PATH <- c("v4", "mapbox.mapbox-terrain-v2", "tilequery")
 #' 
 #' Get elevations of given coordinates using the Mapbox tilequery API.
 #' 
-#' 
 #' @inheritParams g3r
 #' @param limit Maximum number of elevations to return.
 #' 
@@ -15,7 +14,7 @@ BASE_PATH <- c("v4", "mapbox.mapbox-terrain-v2", "tilequery")
 #' @return A vector of elevations.
 #' 
 #' @export
-get_elevations <- function(lat, lon, limit = 50L, 
+get_mapbox_elevations <- function(lat, lon, limit = 50L, 
   mapbox_token = Sys.getenv("MAPBOX_TOKEN")) {
 
   if(missing(lat) || missing(lon))

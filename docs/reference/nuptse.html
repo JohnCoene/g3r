@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Points — g3r_points • g3r</title>
+<title>Nuptse — nuptse • g3r</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -42,8 +42,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Points — g3r_points" />
-<meta property="og:description" content="Add points to a map." />
+<meta property="og:title" content="Nuptse — nuptse" />
+<meta property="og:description" content="Manually collected coordinates on Mount Nuptse: 
+don't rely on this for your next hike." />
 <meta property="og:image" content="https://g3r.john-coene.com/logo.png" />
 <meta name="twitter:card" content="summary" />
 
@@ -140,59 +141,33 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Points</h1>
+    <h1>Nuptse</h1>
     
-    <div class="hidden name"><code>g3r_points.Rd</code></div>
+    <div class="hidden name"><code>nuptse.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Add points to a map.</p>
+    <p>Manually collected coordinates on Mount Nuptse: 
+don't rely on this for your next hike.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>g3r_points</span>(<span class='no'>g3r</span>, <span class='no'>data</span>, <span class='no'>lat</span>, <span class='no'>lon</span>, <span class='no'>elevation</span>, <span class='no'>size</span>, <span class='no'>color</span>)</pre>
-
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>g3r</th>
-      <td><p>An object of class <code>g3r</code> as returned by <code>g3r</code>.</p></td>
-    </tr>
-    <tr>
-      <th>data</th>
-      <td><p>A data.frame holding coordinates to plot.</p></td>
-    </tr>
-    <tr>
-      <th>lat, lon</th>
-      <td><p>Coordinates and elevation of point.</p></td>
-    </tr>
-    <tr>
-      <th>elevation</th>
-      <td><p>Elevation of point in meters.</p></td>
-    </tr>
-    <tr>
-      <th>size</th>
-      <td><p>The size of the point.</p></td>
-    </tr>
-    <tr>
-      <th>color</th>
-      <td><p>Color of the point.</p></td>
-    </tr>
-    </table>
+    <pre class="usage"><span class='no'>nuptse</span></pre>
 
 
-    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><span class='co'># NOT RUN {</span>
-<span class='fu'><a href='g3r.html'>g3r</a></span>(<span class='fl'>46.5763</span>, <span class='fl'>7.9904</span>) <span class='kw'>%&gt;%</span>
-  <span class='fu'>g3r_points</span>(<span class='no'>everest</span>, <span class='no'>lat</span>, <span class='no'>lon</span>, <span class='no'>ele</span>)
-<span class='co'># }</span><div class='input'>
-</div></pre>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>An data.frame of 5 rows.</p><dl class='dl-horizontal'>
+  <dt><code>name</code></dt><dd><p>Camp name</p></dd>
+  <dt><code>lat</code></dt><dd><p>Latitude</p></dd>
+  <dt><code>lon</code></dt><dd><p>Longitude</p></dd>
+  <dt><code>ele</code></dt><dd><p>Elevation in meters</p></dd>
+</dl>
+
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
-      <li><a href="#examples">Examples</a></li>
+      <li><a href="#format">Format</a></li>
     </ul>
 
   </div>
